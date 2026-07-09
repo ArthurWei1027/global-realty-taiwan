@@ -99,8 +99,22 @@
     `;
 
     const header = headerEl.querySelector('.site-header');
+    const shell = headerEl.querySelector('.site-header-shell');
     const toggle = headerEl.querySelector('.nav-toggle');
     const nav = headerEl.querySelector('.site-nav');
+
+    function placeNavForViewport() {
+      if (!nav || !shell) return;
+      const mobile = window.matchMedia('(max-width: 1024px)').matches;
+      if (mobile) {
+        if (nav.parentElement !== document.body) document.body.appendChild(nav);
+      } else if (nav.parentElement !== shell) {
+        shell.appendChild(nav);
+      }
+    }
+
+    placeNavForViewport();
+    window.addEventListener('resize', placeNavForViewport, { passive: true });
 
     if (header) {
       window.addEventListener(
