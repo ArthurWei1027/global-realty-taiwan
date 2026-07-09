@@ -143,6 +143,7 @@
             <div class="site-footer--nord__office">
               <h4>大巨蛋辦公室 Taipei Dome Office</h4>
               <p>台北市信義區忠孝東路四段 525 號 14–15 樓<br>THE COLLECTIVE 巨蛋國際中心</p>
+              <p><a href="https://maps.app.goo.gl/5T6544quU6L9Bqam8" target="_blank" rel="noopener noreferrer">Google 地圖</a></p>
               <p><a href="mailto:arthurwei@globalrealty.com.au">arthurwei@globalrealty.com.au</a></p>
             </div>
             <div class="site-footer--nord__office">
