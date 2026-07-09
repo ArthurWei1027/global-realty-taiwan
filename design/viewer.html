@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>設計稿預覽｜澳華國際</title>
+  <link rel="stylesheet" href="css/portal.css">
+</head>
+<body class="viewer-shell">
+  <header class="viewer-bar">
+    <a href="index.html">← 返回預覽站</a>
+    <span class="viewer-bar__title" id="viewer-title">載入中…</span>
+    <nav class="viewer-bar__nav" aria-label="頁面導覽">
+      <a class="portal-btn portal-btn--ghost" id="viewer-prev" href="#">上一頁</a>
+      <a class="portal-btn portal-btn--ghost" id="viewer-next" href="#">下一頁</a>
+      <a class="portal-btn portal-btn--secondary" id="viewer-live" href="#">Live 預覽 ↗</a>
+    </nav>
+  </header>
+
+  <div class="viewer-canvas">
+    <img id="viewer-image" src="" alt="">
+    <p class="viewer-canvas__missing" id="viewer-missing" hidden>
+      設計稿 PNG 尚未匯出。<br>
+      請在專案根目錄執行：<code>python scripts/export-design-screenshots.py</code>
+    </p>
+  </div>
+
+  <script src="js/pages.js"></script>
+  <script src="js/viewer.js"></script>
+</body>
+</html>

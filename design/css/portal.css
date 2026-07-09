@@ -1,0 +1,345 @@
+:root {
+  --portal-bg: #f1f5f9;
+  --portal-card: #ffffff;
+  --portal-text: #0f172a;
+  --portal-muted: #64748b;
+  --portal-accent: #b45309;
+  --portal-border: #e2e8f0;
+  --portal-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--portal-bg);
+  color: var(--portal-text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--portal-accent);
+}
+
+.portal-header {
+  padding: 2rem 1.5rem;
+  background: var(--portal-card);
+  border-bottom: 1px solid var(--portal-border);
+  text-align: center;
+}
+
+.portal-header h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.portal-header p {
+  margin: 0;
+  color: var(--portal-muted);
+}
+
+.portal-spec {
+  display: flex;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.8125rem;
+  color: var(--portal-muted);
+  background: var(--portal-card);
+  border-bottom: 1px solid var(--portal-border);
+}
+
+.portal-spec span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.portal-notice {
+  max-width: 960px;
+  margin: 1.25rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.portal-notice__inner {
+  padding: 1rem 1.25rem;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #78350f;
+}
+
+.portal-notice__inner strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.portal-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.portal-card {
+  background: var(--portal-card);
+  border: 1px solid var(--portal-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--portal-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-card__thumb {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.portal-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.portal-card__thumb--missing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--portal-muted);
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.portal-card__num {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  background: rgba(15, 23, 42, 0.75);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.portal-card__body {
+  padding: 1.1rem 1.25rem 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.portal-card__body h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.portal-card__subtitle {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--portal-accent, #2d7a7a);
+  font-weight: 600;
+}
+
+.portal-card__path {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--portal-muted);
+  font-family: ui-monospace, Consolas, monospace;
+}
+
+.portal-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.portal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.portal-btn--primary {
+  background: var(--portal-accent);
+  color: #fff;
+}
+
+.portal-btn--primary:hover {
+  background: #92400e;
+}
+
+.portal-btn--secondary {
+  background: #fff;
+  color: var(--portal-text);
+  border-color: var(--portal-border);
+}
+
+.portal-btn--secondary:hover {
+  background: #f8fafc;
+}
+
+.portal-btn--ghost {
+  background: transparent;
+  color: var(--portal-muted);
+  border-color: var(--portal-border);
+}
+
+.portal-gallery {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.portal-gallery .page-block {
+  margin-bottom: 3rem;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--portal-border);
+  box-shadow: var(--portal-shadow);
+}
+
+.portal-gallery .page-block__header {
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--portal-border);
+  background: #f8fafc;
+}
+
+.portal-gallery .page-block__header h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.portal-gallery .page-block img {
+  width: 100%;
+  display: block;
+}
+
+.portal-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.portal-tab {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--portal-border);
+  background: #fff;
+  color: var(--portal-muted);
+  font-size: 0.8125rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.portal-tab.is-active {
+  background: var(--portal-text);
+  color: #fff;
+  border-color: var(--portal-text);
+}
+
+/* Viewer */
+.viewer-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewer-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1.25rem;
+  background: var(--portal-text);
+  color: #fff;
+}
+
+.viewer-bar a {
+  color: #fde68a;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.viewer-bar__title {
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.viewer-bar__nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.viewer-bar .portal-btn {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.7rem;
+}
+
+.viewer-bar .portal-btn--secondary {
+  color: var(--portal-text);
+}
+
+.viewer-canvas {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.viewer-canvas img {
+  max-width: 1440px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: var(--portal-shadow);
+  background: #fff;
+}
+
+.viewer-canvas__missing {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--portal-muted);
+}

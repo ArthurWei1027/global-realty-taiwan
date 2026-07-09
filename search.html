@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>搜尋結果｜環球置業 Global Realty · 澳華國際集團</title>
+  <meta name="description" content="搜尋環球置業精選建案、活動預告與澳洲不動產小課堂內容。">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/brand.css">
+</head>
+<body data-page="search">
+  <div id="site-header"></div>
+
+  <main>
+    <header class="page-hero--nord">
+      <div class="container">
+        <h1>搜尋結果</h1>
+        <form class="search-page__form" role="search" action="search.html" method="get">
+          <input type="search" name="q" id="search-page-input" class="search-page__input" placeholder="搜尋建案、活動、小課堂主題…" aria-label="搜尋網站內容" autocomplete="off">
+          <button type="submit" class="btn btn-nord">搜尋</button>
+        </form>
+        <p class="lead search-page__summary" aria-live="polite"></p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="search-results" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/brand.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

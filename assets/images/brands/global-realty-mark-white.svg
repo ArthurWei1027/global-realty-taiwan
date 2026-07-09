@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 58" role="img" aria-label="°nm Global Realty">
+  <!-- Official mark from GR handbook: six slanted architectural bars (white for dark backgrounds) -->
+  <g fill="#ffffff">
+    <polygon points="0,5.02 0,50.64 6.04,53.43 6.04,7.86"/>
+    <polygon points="9.44,9.43 9.44,55.05 15.69,58.01 15.69,12.42"/>
+    <polygon points="19.09,14.02 19.09,41.32 25.44,44.3 25.44,16.99"/>
+    <polygon points="28.84,0 28.84,45.92 35.3,48.95 35.3,2.98"/>
+    <polygon points="38.7,4.57 38.7,50.51 44.94,53.44 44.94,7.48"/>
+    <polygon points="48.35,9.09 48.35,55.03 54.59,57.96 54.59,12.03"/>
+  </g>
+</svg>

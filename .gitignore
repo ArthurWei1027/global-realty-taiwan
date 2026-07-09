@@ -1,0 +1,34 @@
+# Internal reference files (not served on the public site)
+*.pptx
+*.pdf
+*.zip
+首頁影片/
+小學堂影片/
+SITEMAP/
+tools/
+design/desktop/
+
+# Legacy folder name variants
+宣传影片/
+小课堂影片/
+首页影片/
+
+# Root-level mockups / handoff assets (site uses assets/)
+/*.png
+/*.jpg
+/*.jpeg
+
+# Dev tunnel / deploy artifacts
+**/cloudflared*
+scripts/pagednet-debug.html
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/

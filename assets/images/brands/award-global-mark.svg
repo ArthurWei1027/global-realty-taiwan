@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="澳華國際 Award Global">
+  <!-- Fallback SVG approximating official Award Global mark -->
+  <g>
+    <ellipse cx="38" cy="62" rx="36" ry="20" fill="#e00010" transform="rotate(-20 38 62)"/>
+    <ellipse cx="52" cy="48" rx="20" ry="36" fill="#f8b800" transform="rotate(30 52 48)" opacity="0.92"/>
+    <ellipse cx="78" cy="30" rx="9" ry="18" fill="#f8d800" transform="rotate(30 78 30)"/>
+  </g>
+</svg>
