@@ -253,10 +253,29 @@ body[data-page="home"] .home-landscape {
     min-height: 320px;
   }
 
+  body[data-page="home"] .event-carousel,
+  body[data-page="home"] .event-carousel__track,
+  body[data-page="home"] .event-slide,
+  body[data-page="home"] .event-slide__img {
+    min-height: 260px;
+  }
+
+  body[data-page="home"] .event-carousel__dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  body[data-page="home"] .classroom-preview-grid--home {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
+    margin: 0;
+    gap: var(--space-3);
+  }
+}
+
+@media (max-width: 480px) {
   body[data-page="home"] .classroom-preview-grid--home {
     grid-template-columns: 1fr;
-    max-width: 280px;
-    margin: 0 auto;
   }
 }
 

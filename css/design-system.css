@@ -32,6 +32,10 @@
   --font-family: "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
   --max-width: 1200px;
   --header-height: 72px;
+  --mobile-dock-height: 64px;
+  --bp-tablet: 1024px;
+  --bp-mobile: 768px;
+  --bp-mobile-sm: 480px;
   --radius: 8px;
   --shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
   --transition-normal: 300ms ease;
@@ -45,6 +49,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -55,6 +60,11 @@ body {
   color: var(--color-text-light-main);
   background-color: var(--color-bg-light);
   transition: background-color var(--transition-normal), color var(--transition-normal);
+  overflow-x: clip;
+}
+
+body.nav-open {
+  overflow: hidden;
 }
 
 img {
@@ -216,4 +226,24 @@ p { margin: 0 0 var(--space-4); }
 
 .text-center {
   text-align: center;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .section--compact {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  body {
+    padding-bottom: calc(var(--mobile-dock-height) + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--space-8) var(--space-3);
+  }
 }

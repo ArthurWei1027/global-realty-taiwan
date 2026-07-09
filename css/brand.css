@@ -70,6 +70,26 @@ body[data-page="home"] .brand-lockup__primary-en {
   height: 36px;
 }
 
+@media (max-width: 480px) {
+  .site-header__brand .brand-lockup__mark {
+    width: 30px;
+    height: 32px;
+  }
+
+  .site-header__brand .brand-lockup__primary {
+    font-size: 0.92rem;
+  }
+
+  .site-header__brand .brand-from {
+    font-size: 0.625rem;
+  }
+
+  .site-header__brand .brand-from__mark {
+    width: 14px;
+    height: 14px;
+  }
+}
+
 .site-footer--nord .brand-lockup {
   margin-bottom: var(--space-2);
 }

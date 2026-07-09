@@ -913,6 +913,19 @@
   }
 }
 
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-subnav__tabs a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-2) var(--space-4);
+  }
+}
+
 /* ── Nord shared components ── */
 
 .about-split {
@@ -1251,8 +1264,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
   border: none;
   border-radius: 50%;
@@ -2162,28 +2175,82 @@
 
 @media (max-width: 900px) {
   .floating-dock {
-    right: 12px;
-    gap: 4px;
-    width: 44px;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    gap: 0;
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px));
+    background: rgba(15, 23, 42, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 -4px 24px rgba(15, 23, 42, 0.2);
   }
 
   .floating-dock__link {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    box-shadow: none;
+    flex-shrink: 0;
+  }
+
+  .floating-dock__link:hover {
+    transform: none;
+    opacity: 0.85;
   }
 
   .floating-dock__link svg {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
   }
 
   .floating-dock__qr {
-    width: 148px;
-    padding: 10px;
+    position: fixed;
+    left: 50%;
+    right: auto;
+    top: auto;
+    bottom: calc(var(--mobile-dock-height) + 16px + env(safe-area-inset-bottom, 0px));
+    transform: translateX(-50%);
+    width: min(280px, calc(100vw - 32px));
+    padding: 16px;
+    z-index: 10001;
+  }
+
+  .floating-dock__qr::after {
+    display: none;
   }
 
   .floating-dock__qr img {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .floating-dock__link--line.is-qr-open .floating-dock__qr,
+  .floating-dock__link--line:focus-within .floating-dock__qr {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%);
+  }
+
+  .floating-dock-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.5);
+    z-index: 10000;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .floating-dock-backdrop.is-visible {
+    display: block;
   }
 }

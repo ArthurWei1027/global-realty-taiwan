@@ -51,6 +51,32 @@
     }).join('');
 
     document.body.appendChild(dock);
+
+    const lineLink = dock.querySelector('.floating-dock__link--line');
+    const mobileMq = window.matchMedia('(max-width: 900px)');
+
+    if (lineLink && mobileMq.matches) {
+      const backdrop = document.createElement('button');
+      backdrop.type = 'button';
+      backdrop.className = 'floating-dock-backdrop';
+      backdrop.setAttribute('aria-label', '關閉 LINE QR');
+      document.body.appendChild(backdrop);
+
+      function closeQr() {
+        lineLink.classList.remove('is-qr-open');
+        backdrop.classList.remove('is-visible');
+      }
+
+      lineLink.addEventListener('click', (e) => {
+        if (!lineLink.classList.contains('is-qr-open')) {
+          e.preventDefault();
+          lineLink.classList.add('is-qr-open');
+          backdrop.classList.add('is-visible');
+        }
+      });
+
+      backdrop.addEventListener('click', closeQr);
+    }
   }
 
   window.AGFloatingDock = { renderFloatingDock };

@@ -111,9 +111,41 @@
     }
 
     if (toggle && nav) {
+      const backdrop = document.createElement('button');
+      backdrop.type = 'button';
+      backdrop.className = 'nav-backdrop';
+      backdrop.setAttribute('aria-label', '關閉選單');
+      header.appendChild(backdrop);
+
+      function closeNav() {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', '開啟選單');
+        document.body.classList.remove('nav-open');
+        backdrop.classList.remove('is-visible');
+      }
+
+      function openNav() {
+        nav.classList.add('is-open');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', '關閉選單');
+        document.body.classList.add('nav-open');
+        backdrop.classList.add('is-visible');
+      }
+
       toggle.addEventListener('click', () => {
-        const isOpen = nav.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', String(isOpen));
+        if (nav.classList.contains('is-open')) closeNav();
+        else openNav();
+      });
+
+      backdrop.addEventListener('click', closeNav);
+
+      nav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeNav);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) closeNav();
       });
     }
   }
