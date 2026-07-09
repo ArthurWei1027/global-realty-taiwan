@@ -11,20 +11,25 @@ INCLUDE_DIRS = {"css", "js", "data", "assets", "design"}
 INCLUDE_ROOT_FILES = {
     "index.html",
     "properties.html",
+    "property.html",
     "leasing.html",
     "events.html",
+    "event.html",
     "classroom.html",
     "about.html",
     "group.html",
-    "event.html",
+    "privacy.html",
+    "search.html",
     "sitemap.html",
     "sitemap.xml",
     "robots.txt",
+    "llms.txt",
     "contact.html",
     "news.html",
     "insights.html",
     "README.md",
     "HANDOFF-IT-DONY.md",
+    "SEO-GEO-CONTENT-GUIDE.md",
 }
 
 EXCLUDE_DIR_NAMES = {"scripts", "presentations", "__pycache__", "SITEMAP", ".git"}

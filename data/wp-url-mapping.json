@@ -1,0 +1,165 @@
+{
+  "version": "2026-07-09",
+  "notes": "靜態站 URL → WordPress 建議 slug。正式網域待 Dony 確認後替換 {base}。",
+  "basePreview": "https://arthurwei1027.github.io/global-realty-taiwan",
+  "baseProduction": "https://www.awardglobal.com.au",
+  "pages": [
+    {
+      "static": "index.html",
+      "wpPath": "/",
+      "type": "front-page",
+      "title": "首頁"
+    },
+    {
+      "static": "properties.html",
+      "wpPath": "/properties/",
+      "type": "archive",
+      "title": "精選建案"
+    },
+    {
+      "static": "property.html?slug=623-collins",
+      "wpPath": "/property/623-collins/",
+      "type": "single",
+      "cpt": "property",
+      "slug": "623-collins",
+      "title": "623 Collins"
+    },
+    {
+      "static": "property.html?slug=aura-melbourne-square",
+      "wpPath": "/property/aura-melbourne-square/",
+      "type": "single",
+      "cpt": "property",
+      "slug": "aura-melbourne-square",
+      "title": "Aura Melbourne Square"
+    },
+    {
+      "static": "property.html?slug=sydney-harbour-collection",
+      "wpPath": "/property/sydney-harbour-collection/",
+      "type": "single",
+      "cpt": "property",
+      "slug": "sydney-harbour-collection",
+      "title": "Sydney Harbour Collection"
+    },
+    {
+      "static": "property.html?slug=sydney-cbd-residences",
+      "wpPath": "/property/sydney-cbd-residences/",
+      "type": "single",
+      "cpt": "property",
+      "slug": "sydney-cbd-residences",
+      "title": "Sydney CBD Residences"
+    },
+    {
+      "static": "events.html",
+      "wpPath": "/events/",
+      "type": "archive",
+      "title": "活動預告"
+    },
+    {
+      "static": "event.html?slug=taipei-101-seminar",
+      "wpPath": "/events/taipei-101-seminar/",
+      "type": "single",
+      "cpt": "event",
+      "slug": "taipei-101-seminar",
+      "title": "台北 101 置產說明會"
+    },
+    {
+      "static": "event.html?slug=wine-property-tasting",
+      "wpPath": "/events/wine-property-tasting/",
+      "type": "single",
+      "cpt": "event",
+      "slug": "wine-property-tasting",
+      "title": "品酒會"
+    },
+    {
+      "static": "event.html?slug=taipei-101-seminar-2026-09",
+      "wpPath": "/events/taipei-101-seminar-2026-09/",
+      "type": "single",
+      "cpt": "event",
+      "slug": "taipei-101-seminar-2026-09",
+      "title": "台北 101 說明會（2026-09 示範）"
+    },
+    {
+      "static": "event.html?slug=taipei-101-seminar-2026-10",
+      "wpPath": "/events/taipei-101-seminar-2026-10/",
+      "type": "single",
+      "cpt": "event",
+      "slug": "taipei-101-seminar-2026-10",
+      "title": "台北 101 說明會（2026-10 示範）"
+    },
+    {
+      "static": "event.html?slug=taipei-101-briefing-2026",
+      "wpPath": "/events/taipei-101-briefing-2026/",
+      "type": "single",
+      "cpt": "event",
+      "slug": "taipei-101-briefing-2026",
+      "title": "台北 101 說明會 2026"
+    },
+    {
+      "static": "event.html?slug=wine-property-tasting-2026",
+      "wpPath": "/events/wine-property-tasting-2026/",
+      "type": "single",
+      "cpt": "event",
+      "slug": "wine-property-tasting-2026",
+      "title": "品酒會 2026"
+    },
+    {
+      "static": "leasing.html",
+      "wpPath": "/leasing/",
+      "type": "page",
+      "title": "租賃管理"
+    },
+    {
+      "static": "classroom.html",
+      "wpPath": "/classroom/",
+      "type": "archive",
+      "title": "澳洲不動產小課堂"
+    },
+    {
+      "static": "about.html",
+      "wpPath": "/about/",
+      "type": "page",
+      "title": "關於環球置業"
+    },
+    {
+      "static": "group.html",
+      "wpPath": "/about/group/",
+      "type": "page",
+      "title": "澳華國際集團"
+    },
+    {
+      "static": "privacy.html",
+      "wpPath": "/privacy/",
+      "type": "page",
+      "title": "隱私權政策"
+    },
+    {
+      "static": "sitemap.html",
+      "wpPath": "/sitemap/",
+      "type": "page",
+      "title": "網站地圖"
+    },
+    {
+      "static": "search.html",
+      "wpPath": "/search/",
+      "type": "page",
+      "title": "站內搜尋"
+    }
+  ],
+  "redirects": [
+    {
+      "static": "contact.html",
+      "redirectTo": "/#consult",
+      "note": "301 至首頁諮詢區"
+    },
+    {
+      "static": "news.html",
+      "redirectTo": "/events/",
+      "note": "301 至活動預告"
+    },
+    {
+      "static": "insights.html",
+      "redirectTo": "/classroom/",
+      "note": "301 至小課堂"
+    }
+  ]
+}

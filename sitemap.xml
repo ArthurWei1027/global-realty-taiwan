@@ -1,97 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- GitHub Pages 預覽用。WordPress 正式上線後請將網域改為正式網址（見 SEO-GEO-CONTENT-GUIDE.md）。 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.awardglobal.com.au/index.html</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/properties.html</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/properties.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/property.html?slug=623-collins</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/property.html?slug=623-collins</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/property.html?slug=aura-melbourne-square</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/property.html?slug=aura-melbourne-square</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/property.html?slug=sydney-harbour-collection</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/property.html?slug=sydney-harbour-collection</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/property.html?slug=sydney-cbd-residences</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/property.html?slug=sydney-cbd-residences</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/leasing.html</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/leasing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/events.html</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/events.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/event.html?slug=taipei-101-seminar</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/event.html?slug=taipei-101-seminar</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/event.html?slug=wine-property-tasting</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/event.html?slug=wine-property-tasting</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/event.html?slug=taipei-101-seminar-2026-09</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/event.html?slug=taipei-101-seminar-2026-09</loc>
     <changefreq>weekly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/event.html?slug=taipei-101-seminar-2026-10</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/event.html?slug=taipei-101-seminar-2026-10</loc>
     <changefreq>weekly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/event.html?slug=taipei-101-briefing-2026</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/event.html?slug=taipei-101-briefing-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/event.html?slug=wine-property-tasting-2026</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/event.html?slug=wine-property-tasting-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/classroom.html</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/classroom.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/about.html</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/group.html</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/group.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/privacy.html</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.awardglobal.com.au/sitemap.html</loc>
+    <loc>https://arthurwei1027.github.io/global-realty-taiwan/sitemap.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

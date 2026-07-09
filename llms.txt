@@ -1,0 +1,54 @@
+# 環球置業 Global Realty — 台灣官網
+
+> 澳華國際集團 Award Global 旗下地產品牌，服務台灣客戶跨境澳洲置產與租賃管理。
+
+## 品牌
+
+- 主品牌：環球置業 Global Realty
+- 母品牌：澳華國際集團 Award Global（2005 年成立於澳洲雪梨）
+- 語言：繁體中文（zh-Hant）
+- 服務區域：台灣（顧問據點）、澳洲（雪梨、墨爾本等置產標的）
+
+## 服務
+
+- 澳洲精選建案銷售與置產諮詢
+- 跨境租賃管理（房東代管）
+- 置產說明會與投資教育（小課堂）
+- 不提供保證貸款審批、利率或投資回報；不構成法律／稅務／移民建議
+
+## 台灣辦公室
+
+- 台北 101：台北市信義區信義路五段 7 號 台北 101 45 樓 A-1 室
+- 大巨蛋：台北市信義區忠孝東路四段 525 號 14–15 樓
+- Email：arthurwei@globalrealty.com.au
+
+## 公開數據（澳華國際集團）
+
+- 30+ 分行、500+ 員工、50,000+ 客戶、500 億+ 澳元交易額
+
+## 主要頁面
+
+- 首頁：https://arthurwei1027.github.io/global-realty-taiwan/index.html
+- 精選建案：https://arthurwei1027.github.io/global-realty-taiwan/properties.html
+- 活動預告：https://arthurwei1027.github.io/global-realty-taiwan/events.html
+- 租賃管理：https://arthurwei1027.github.io/global-realty-taiwan/leasing.html
+- 澳洲不動產小課堂：https://arthurwei1027.github.io/global-realty-taiwan/classroom.html
+- 關於環球置業：https://arthurwei1027.github.io/global-realty-taiwan/about.html
+- 澳華國際集團：https://arthurwei1027.github.io/global-realty-taiwan/group.html
+- 隱私權政策：https://arthurwei1027.github.io/global-realty-taiwan/privacy.html
+
+## 外部連結
+
+- 澳洲環球置業：https://www.globalrealty.com.au/
+- 澳華國際集團：https://www.awardglobal.com.au/
+
+## 內容維護
+
+- 建案資料：data/properties.json
+- 活動資料：data/events.json
+- SEO 設定：js/seo-config.js、js/seo.js
+- 完整指南：SEO-GEO-CONTENT-GUIDE.md
+
+## 正式上線
+
+GitHub Pages 為審閱預覽。正式 WordPress 網域由 IT（Dony）部署後，請更新本檔 URL 為正式網域。

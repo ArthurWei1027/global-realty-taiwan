@@ -58,6 +58,17 @@
 
     document.title = `${event.title}｜活動預告｜環球置業 Global Realty`;
 
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', event.summary);
+    else {
+      const m = document.createElement('meta');
+      m.name = 'description';
+      m.content = event.summary;
+      document.head.appendChild(m);
+    }
+    window.GRSeo?.injectEventSchema(event);
+    window.GRSeo?.refreshPageMeta?.();
+
     const heroSrc = event.heroImage || event.image || 'assets/images/news-placeholder.svg';
     const posterSrc = event.posterImage || event.heroImage || event.image;
     const moreEvents = events.filter((e) => e.slug !== slug).slice(0, 2);

@@ -80,6 +80,10 @@
     }
 
     document.title = `${property.name}｜精選建案｜環球置業 Global Realty`;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', property.summary);
+    window.GRSeo?.injectPropertySchema(property);
+    window.GRSeo?.refreshPageMeta?.();
     const consultUrl = `index.html?property=${encodeURIComponent(property.slug)}&cta=${encodeURIComponent(property.ctaType)}#consult`;
 
     root.innerHTML = `

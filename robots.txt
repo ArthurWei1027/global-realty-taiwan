@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.awardglobal.com.au/sitemap.xml
+# GitHub Pages 預覽（審閱用，2026-07-09）
+Sitemap: https://arthurwei1027.github.io/global-realty-taiwan/sitemap.xml
+
+# 正式 WordPress 上線後，請 Dony 改為正式網域，例如：
+# Sitemap: https://www.[正式網域]/sitemap.xml
