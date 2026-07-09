@@ -81,19 +81,21 @@
     const navLinks = navItems.map(renderNavItem).join('');
 
     headerEl.innerHTML = `
-      <header class="site-header site-header--nord" role="banner">
-        <div class="site-header__inner">
-          <div class="site-header__brand">
-            ${brandLockup()}
-            ${brandFrom()}
+      <div class="site-header-shell">
+        <header class="site-header site-header--nord" role="banner">
+          <div class="site-header__inner">
+            <div class="site-header__brand">
+              ${brandLockup()}
+              ${brandFrom()}
+            </div>
+            <button type="button" class="nav-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
           </div>
-          <button type="button" class="nav-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
-          <nav class="site-nav site-nav--nord" aria-label="主要導覽">
-            ${navLinks}
-            ${searchFormHtml()}
-          </nav>
-        </div>
-      </header>
+        </header>
+        <nav class="site-nav site-nav--nord" aria-label="主要導覽">
+          ${navLinks}
+          ${searchFormHtml()}
+        </nav>
+      </div>
     `;
 
     const header = headerEl.querySelector('.site-header');
@@ -115,7 +117,7 @@
       backdrop.type = 'button';
       backdrop.className = 'nav-backdrop';
       backdrop.setAttribute('aria-label', '關閉選單');
-      header.appendChild(backdrop);
+      document.body.appendChild(backdrop);
 
       function closeNav() {
         nav.classList.remove('is-open');
