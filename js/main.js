@@ -157,7 +157,7 @@
           Copyright 2026&nbsp;|&nbsp;
           <a href="${pageHref('index.html')}">Global Realty</a>&nbsp;|&nbsp;
           All Rights Reserved&nbsp;|&nbsp;
-          <a href="https://globalrealty.com.au/privacy-policy/" target="_blank" rel="noopener noreferrer">隱私權政策</a>
+          <a href="${pageHref('privacy.html')}">隱私權政策</a>
         </p>
       </div>`;
   }
