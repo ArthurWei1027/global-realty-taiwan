@@ -1541,22 +1541,7 @@
   color: var(--color-text-light-muted);
   font-size: var(--font-size-sm);
   line-height: 1.55;
-  margin: 0 0 var(--space-2);
-}
-
-.map-office__link {
-  text-align: center;
   margin: 0 0 var(--space-3);
-  font-size: var(--font-size-sm);
-}
-
-.map-office__link a {
-  color: var(--color-accent);
-  text-decoration: none;
-}
-
-.map-office__link a:hover {
-  text-decoration: underline;
 }
 
 .map-embed {
