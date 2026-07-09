@@ -1,0 +1,70 @@
+(function () {
+  window.GR_EVENTS = {
+    events: [
+      {
+        slug: 'taipei-101-seminar',
+        status: 'upcoming',
+        featured: true,
+        category: 'seminar',
+        categoryLabel: '說明會系列',
+        date: '2026-07-18',
+        dateLabel: '2026/7/18',
+        dateDisplay: '2026 / 07 / 18 (六) 下午 2:00 起',
+        title: '澳洲置產說明會 · 台北 101',
+        summary:
+          '於台北 101 辦公室定期舉辦，解析澳洲樓市趨勢、精選建案與海外買家合規要點，並提供一對一諮詢。',
+        image: 'assets/images/gallery/event-101-1.jpg',
+        imageAlt: '台北 101 澳洲置產說明會現場',
+        heroImage: 'assets/images/gallery/event-101-2.jpg',
+        posterImage: 'assets/images/gallery/event-101-3.jpg',
+        location: '台北市信義區信義路五段 7 號 · 台北 101 45 樓 A-1 室',
+        typeLabel: '置產說明會',
+        ctaLabel: '預約下一場',
+        ctaUrl: 'index.html#consult',
+        introLead: '環球置業台北 101 亞太運營中心 · 澳洲置產說明會',
+        body: [
+          '環球置業定期於台北 101 45 樓亞太運營中心舉辦澳洲置產說明會，為台灣高資產客戶解析雪梨、墨爾本核心商圈最新樓市動態，並分享海外買家須知的 FIRB 申請、稅務與交割流程要點。',
+          '現場由資深置業顧問介紹環球置業嚴選建案，包含期房與現房配置方案，並可預約一對一諮詢，依您的預算、用途與持有策略提供參考方向。',
+          '說明會採小班制進行，名額有限，歡迎事先填寫諮詢表單或來電預約，以便為您保留席位並準備相關資料。',
+        ],
+        details: [
+          { label: '活動形式', value: '現場說明會 · 一對一諮詢' },
+          { label: '適合對象', value: '計畫布局澳洲置產的台灣投資者與家庭' },
+          { label: '報名方式', value: '官網諮詢表單或 Email 預約' },
+        ],
+      },
+      {
+        slug: 'wine-property-tasting',
+        status: 'upcoming',
+        featured: true,
+        category: 'themed',
+        categoryLabel: '主題活動',
+        date: '2026-08-09',
+        dateLabel: '2026/8/9',
+        dateDisplay: '2026 / 08 / 09 (日) 下午 3:00 起',
+        title: '紅酒置產品鑑會 · 文華東方',
+        summary:
+          '結合澳洲紅酒品鑑與墨爾本置產分享的小型主題聚會，輕鬆氛圍中掌握第一手項目資訊。',
+        image: 'assets/images/gallery/event-mo-1.jpg',
+        imageAlt: '文華東方紅酒置產品鑑會現場',
+        heroImage: 'assets/images/gallery/event-mo-2.jpg',
+        posterImage: 'assets/images/gallery/event-mo-3.jpg',
+        location: '台北市松山區民生東路三段 158 號 · 文華東方酒店',
+        typeLabel: '主題品鑑會',
+        ctaLabel: '索取活動資訊',
+        ctaUrl: 'index.html#consult',
+        introLead: '澳洲紅酒 × 墨爾本置產 · 環球置業主題品鑑會',
+        body: [
+          '環球置業以輕鬆品鑑的形式，結合澳洲精品紅酒與墨爾本核心商圈置產分享，在優雅場域中為來賓介紹最新建案與跨境置產要點。',
+          '活動由置業顧問分享墨爾本南岸、CBD 等區域的發展脈絡與租賃管理實務，並提供 Q&A 交流時間，適合初次了解澳洲置產或希望掌握第一手項目資訊的貴賓。',
+          '席位有限，採邀請制與事先報名制。歡迎透過官網諮詢表單留下聯絡方式，我們將寄送活動資訊與報名細節。',
+        ],
+        details: [
+          { label: '活動形式', value: '紅酒品鑑 · 置產主題分享 · 自由交流' },
+          { label: '適合對象', value: '對澳洲置產有興趣、偏好小型聚會的貴賓' },
+          { label: '報名方式', value: '官網諮詢表單或 Email 索取邀請' },
+        ],
+      },
+    ],
+  };
+})();

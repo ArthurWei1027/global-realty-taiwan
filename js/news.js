@@ -47,8 +47,15 @@ class NewsRenderer {
     return items;
   }
 
+  eventHref(item) {
+    if (item.category === 'event') {
+      return `event.html?slug=${encodeURIComponent(item.slug)}`;
+    }
+    return `events.html#${item.slug}`;
+  }
+
   cardHtml(item, compact = false, withImage = false) {
-    const href = `events.html#${item.slug}`;
+    const href = this.eventHref(item);
     const imageSrc = item.image || 'assets/images/news-placeholder.svg';
 
     if (compact) {
@@ -173,7 +180,7 @@ async function initHomeEventCarousel() {
   const slidesHtml = items
     .map(
       (item) => `
-      <a class="event-slide" href="events.html#${item.slug}">
+      <a class="event-slide" href="${window.GREvents?.eventUrl ? window.GREvents.eventUrl(item.slug) : (item.category === 'event' ? `event.html?slug=${encodeURIComponent(item.slug)}` : `events.html#${item.slug}`)}">
         <img class="event-slide__img" src="${item.image || 'assets/images/news-placeholder.svg'}" alt="${item.title}" loading="lazy">
         <span class="event-slide__caption">
           <time class="event-slide__date">${item.dateLabel}</time>

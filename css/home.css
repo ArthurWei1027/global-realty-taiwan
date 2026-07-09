@@ -173,12 +173,12 @@ body[data-page="home"] .event-carousel__dot.is-active {
   transform: scale(1.25);
 }
 
-/* 熱門建案：左側兩張直式大圖 */
+/* 熱門建案：並排雙圖預覽（橫式裁切，避免手機單欄堆疊過高） */
 body[data-page="home"] .property-preview-grid--home {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-4);
-  padding: var(--space-6);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  padding: var(--space-4);
   align-content: center;
 }
 
@@ -188,10 +188,16 @@ body[data-page="home"] .property-preview-grid--home .property-card__info {
 
 body[data-page="home"] .property-preview-grid--home .property-card__media {
   margin-bottom: 0;
+  aspect-ratio: 4 / 3;
+  max-height: clamp(140px, 28vw, 260px);
 }
 
 body[data-page="home"] .property-preview-grid--home .property-card__image {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: unset;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center 22%;
 }
 
 /* 小課堂：右側三張直式縮圖 */
@@ -270,6 +276,15 @@ body[data-page="home"] .home-landscape {
     max-width: none;
     margin: 0;
     gap: var(--space-3);
+  }
+
+  body[data-page="home"] .property-preview-grid--home {
+    gap: var(--space-2);
+    padding: var(--space-3);
+  }
+
+  body[data-page="home"] .property-preview-grid--home .property-card__media {
+    max-height: clamp(120px, 34vw, 200px);
   }
 }
 

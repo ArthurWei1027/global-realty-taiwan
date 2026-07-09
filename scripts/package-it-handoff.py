@@ -16,6 +16,7 @@ INCLUDE_ROOT_FILES = {
     "classroom.html",
     "about.html",
     "group.html",
+    "event.html",
     "sitemap.html",
     "sitemap.xml",
     "robots.txt",

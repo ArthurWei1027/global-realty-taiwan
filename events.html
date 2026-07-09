@@ -9,29 +9,39 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/layout.css?v=20260709b">
   <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/brand.css">
+  <link rel="stylesheet" href="css/brand.css?v=20260709f">
 </head>
 <body data-page="events">
   <div id="site-header"></div>
 
   <main>
     <section class="events-upcoming" aria-labelledby="upcoming-heading">
-      <div class="container">
-        <h2 id="upcoming-heading" class="section-heading text-center">活動預告</h2>
-        <p class="section-lead text-center">環球置業定期於台北舉辦澳洲置產說明會與主題品鑑活動，最新場次將於此公布，歡迎預先報名。</p>
-        <div class="events-upcoming__grid">
-          <article class="events-upcoming__card">
-            <p class="events-upcoming__tag">說明會系列</p>
-            <h3>澳洲置產說明會 · 台北 101</h3>
-            <p>於台北 101 辦公室定期舉辦，解析澳洲樓市趨勢、精選建案與海外買家合規要點，並提供一對一諮詢。</p>
-            <a href="index.html#consult" class="btn btn-nord">預約下一場</a>
-          </article>
-          <article class="events-upcoming__card">
-            <p class="events-upcoming__tag">主題活動</p>
-            <h3>紅酒置產品鑑會</h3>
-            <p>結合澳洲紅酒品鑑與墨爾本置產分享的小型主題聚會，輕鬆氛圍中掌握第一手項目資訊。</p>
-            <a href="index.html#consult" class="btn btn-nord">索取活動資訊</a>
-          </article>
+      <div class="events-upcoming__layout">
+        <aside class="events-upcoming__sidebar" aria-label="活動篩選">
+          <h2 id="upcoming-heading">活動預告</h2>
+          <label class="sr-only" for="events-upcoming-search">活動搜尋</label>
+          <input type="search" id="events-upcoming-search" placeholder="活動搜尋...">
+          <nav class="events-upcoming__filters" aria-label="活動類別">
+            <a href="#" class="events-upcoming__filter is-active" data-event-category="">全部活動</a>
+            <a href="#" class="events-upcoming__filter" data-event-category="seminar">說明會系列</a>
+            <a href="#" class="events-upcoming__filter" data-event-category="themed">主題活動</a>
+          </nav>
+          <label class="events-upcoming__month-label" for="events-upcoming-month">月份</label>
+          <select id="events-upcoming-month" class="events-upcoming__month">
+            <option value="">全部月份</option>
+          </select>
+          <p class="events-upcoming__note">環球置業定期於台北舉辦澳洲置產說明會與主題品鑑活動，最新場次將於此公布，歡迎預先報名。</p>
+        </aside>
+        <div class="events-upcoming__main">
+          <div class="events-upcoming__toolbar">
+            <div class="events-upcoming__tabs" role="tablist" aria-label="活動狀態">
+              <button type="button" class="events-upcoming__tab is-active" role="tab" data-event-status="upcoming" aria-selected="true">即將舉行</button>
+              <button type="button" class="events-upcoming__tab" role="tab" data-event-status="past" aria-selected="false">已結束</button>
+            </div>
+            <p class="events-upcoming__count" data-events-count aria-live="polite"></p>
+          </div>
+          <div class="event-feed" data-events-feed aria-live="polite" aria-label="活動列表"></div>
+          <button type="button" class="btn btn-secondary events-upcoming__load-more" data-events-load-more hidden>載入更多</button>
         </div>
       </div>
     </section>
@@ -85,6 +95,8 @@
   <script src="js/brand.js"></script>
   <script src="js/main.js?v=20260709b"></script>
   <script src="js/forms.js"></script>
+  <script src="js/events-data.js"></script>
+  <script src="js/events.js?v=20260709e"></script>
   <script src="js/news.js"></script>
   <script>
     // 活動展示無縫輪播：複製一輪圖片以銜接動畫
