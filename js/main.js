@@ -69,6 +69,13 @@
     return `<a href="index.html" class="brand-lockup"><span class="brand-lockup__primary">環球置業 Global Realty</span></a>`;
   }
 
+  function brandHeader() {
+    if (window.AGBrand?.brandHeaderHtml) {
+      return window.AGBrand.brandHeaderHtml({ href: pageHref('index.html') });
+    }
+    return `${brandLockup()}${brandFrom()}`;
+  }
+
   function brandFrom() {
     if (window.AGBrand) return window.AGBrand.brandFromHtml();
     return `<a href="group.html" class="brand-from">from 澳華國際集團 Award Global</a>`;
@@ -85,8 +92,7 @@
         <header class="site-header site-header--nord" role="banner">
           <div class="site-header__inner">
             <div class="site-header__brand">
-              ${brandLockup()}
-              ${brandFrom()}
+              ${brandHeader()}
             </div>
             <button type="button" class="nav-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
           </div>
@@ -191,12 +197,10 @@
             <div class="site-footer--nord__office">
               <h4>大巨蛋辦公室 Taipei Dome Office</h4>
               <p>台北市信義區忠孝東路四段 525 號 14–15 樓<br>THE COLLECTIVE 巨蛋國際中心</p>
-              <p><a href="mailto:arthurwei@globalrealty.com.au">arthurwei@globalrealty.com.au</a></p>
             </div>
             <div class="site-footer--nord__office">
               <h4>101 45 樓辦公室 Taipei 101 Office</h4>
               <p>台北市信義區信義路五段 7 號<br>台北 101 45 樓 A-1 室</p>
-              <p><a href="mailto:arthurwei@globalrealty.com.au">arthurwei@globalrealty.com.au</a></p>
             </div>
             <div class="site-footer--nord__office">
               <h4>雪梨總部 Sydney Office</h4>
@@ -206,8 +210,8 @@
               <h4>墨爾本 Melbourne Office</h4>
               <p>Level 8, 356 Collins St<br>Melbourne VIC 3000, Australia</p>
             </div>
-            <p class="site-footer--nord__social">
-              <a href="mailto:arthurwei@globalrealty.com.au" aria-label="Email">✉</a>
+            <p class="site-footer--nord__email">
+              <a href="mailto:arthurwei@globalrealty.com.au">arthurwei@globalrealty.com.au</a>
             </p>
           </div>
           <div class="site-footer--nord__form">

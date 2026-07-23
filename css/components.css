@@ -1747,6 +1747,11 @@
   line-height: 1.6;
 }
 
+.site-footer--nord__email {
+  margin: var(--space-2) 0 var(--space-6);
+  font-size: var(--font-size-sm);
+}
+
 .site-footer--nord__form h3 {
   margin-bottom: var(--space-6);
   color: var(--color-primary-navy);

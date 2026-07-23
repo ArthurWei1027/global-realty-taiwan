@@ -1,5 +1,25 @@
 /* 雙品牌 Meta 式呈現 */
 
+.brand-header-logo {
+  display: block;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.brand-header-logo img {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: min(100%, 400px);
+  object-fit: contain;
+}
+
+.site-header__brand:has(.brand-header-logo) {
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+}
+
 .brand-lockup {
   display: flex;
   align-items: center;
@@ -71,6 +91,11 @@ body[data-page="home"] .brand-lockup__primary-en {
 }
 
 @media (max-width: 480px) {
+  .brand-header-logo img {
+    height: 36px;
+    max-width: min(100%, 280px);
+  }
+
   .site-header__brand .brand-lockup__mark {
     width: 30px;
     height: 32px;

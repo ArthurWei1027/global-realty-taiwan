@@ -1,6 +1,15 @@
 (function () {
   const GR_MARK = 'assets/images/brands/global-realty-mark.svg';
-  const AG_MARK = 'assets/images/brands/award-global-mark.png';
+  const AG_MARK = 'assets/images/brands/award-global-mark.svg';
+  const HEADER_LOCKUP = 'assets/images/brands/header-lockup-tw.png';
+
+  function brandHeaderHtml(options = {}) {
+    const { href = 'index.html' } = options;
+    return `
+      <a href="${href}" class="brand-header-logo" aria-label="環球置業 Global Realty · 澳華國際集團 Award Global · 台灣">
+        <img src="${HEADER_LOCKUP}" alt="環球置業 Global Realty · 澳華國際集團 Award Global · 台灣" width="320" height="39" decoding="async">
+      </a>`;
+  }
 
   function brandLockupHtml(options = {}) {
     const { href = 'index.html', markSize = '', footer = false } = options;
@@ -23,5 +32,5 @@
       </a>`;
   }
 
-  window.AGBrand = { brandLockupHtml, brandFromHtml, GR_MARK, AG_MARK };
+  window.AGBrand = { brandHeaderHtml, brandLockupHtml, brandFromHtml, GR_MARK, AG_MARK, HEADER_LOCKUP };
 })();

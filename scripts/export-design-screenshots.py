@@ -13,14 +13,16 @@ BASE = Path(__file__).resolve().parent.parent
 OUT = BASE / "design" / "desktop"
 PORT = 9876
 
+# 命名對齊設計手冊：网站-01 … 网站-08
 PAGES = [
-    ("01-index", "/index.html"),
-    ("02-properties", "/properties.html"),
-    ("03-leasing", "/leasing.html"),
-    ("04-events", "/events.html"),
-    ("05-classroom", "/classroom.html"),
-    ("06-about", "/about.html"),
-    ("07-group", "/group.html"),
+    ("网站-01", "/index.html"),
+    ("网站-02", "/properties.html"),
+    ("网站-03", "/leasing.html"),
+    ("网站-04", "/events.html"),
+    ("网站-05", "/classroom.html"),
+    ("网站-06", "/about.html"),
+    ("网站-07", "/group.html"),
+    ("网站-08", "/privacy.html"),
 ]
 
 
@@ -64,7 +66,7 @@ def main() -> None:
             for filename, path in PAGES:
                 url = f"http://127.0.0.1:{PORT}{path}"
                 page.goto(url, wait_until="networkidle")
-                page.wait_for_timeout(1200)
+                page.wait_for_timeout(1500)
                 target = OUT / f"{filename}.png"
                 page.screenshot(path=str(target), full_page=True)
                 print(f"Saved {target.name}")
