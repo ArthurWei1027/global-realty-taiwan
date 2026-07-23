@@ -63,28 +63,12 @@
       "title": "台北 101 置產說明會"
     },
     {
-      "static": "event.html?slug=wine-property-tasting",
-      "wpPath": "/events/wine-property-tasting/",
+      "static": "event.html?slug=taipei-101-aura-wine-tasting",
+      "wpPath": "/events/taipei-101-aura-wine-tasting/",
       "type": "single",
       "cpt": "event",
-      "slug": "wine-property-tasting",
-      "title": "品酒會"
-    },
-    {
-      "static": "event.html?slug=taipei-101-seminar-2026-09",
-      "wpPath": "/events/taipei-101-seminar-2026-09/",
-      "type": "single",
-      "cpt": "event",
-      "slug": "taipei-101-seminar-2026-09",
-      "title": "台北 101 說明會（2026-09 示範）"
-    },
-    {
-      "static": "event.html?slug=taipei-101-seminar-2026-10",
-      "wpPath": "/events/taipei-101-seminar-2026-10/",
-      "type": "single",
-      "cpt": "event",
-      "slug": "taipei-101-seminar-2026-10",
-      "title": "台北 101 說明會（2026-10 示範）"
+      "slug": "taipei-101-aura-wine-tasting",
+      "title": "AURA 紅酒品鑑會 · 台北 101"
     },
     {
       "static": "event.html?slug=taipei-101-briefing-2026",

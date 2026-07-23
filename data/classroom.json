@@ -1,124 +1,67 @@
 {
   "videos": [
     {
-      "slug": "firb-guide",
-      "title": "2026 海外投資人必看：專業解析",
+      "slug": "episode-01",
+      "title": "第1集：台灣人沒澳洲身份，能買房嗎？",
       "category": "overseas",
-      "categoryLabel": "海外買房",
-      "summary": "海外買家進入澳洲房市前必懂的身分、許可與合規重點。",
-      "thumbnail": "assets/images/cls-firb-guide.jpg"
+      "thumbnail": "assets/images/classroom/classroom-ep01-cover.jpg?v=20260723d",
+      "videoSrc": "assets/videos/classroom/classroom-ep01.mp4"
     },
     {
-      "slug": "stamp-duty",
-      "title": "澳洲海外買家印花稅法規概覽",
-      "category": "tax",
-      "categoryLabel": "稅務法規",
-      "summary": "各州印花稅與海外買家附加稅差異整理，購房前先做預算。",
-      "thumbnail": "assets/images/cls-stamp-duty.jpg"
-    },
-    {
-      "slug": "capital-gains",
-      "title": "房產處置利潤稅項（增值稅）",
-      "category": "tax",
-      "categoryLabel": "稅務法規",
-      "summary": "出售澳洲房產時可能涉及的資本利得稅概念與注意事項。",
-      "thumbnail": "assets/images/cls-capital-gains.jpg"
-    },
-    {
-      "slug": "buying-process",
-      "title": "買賣流程與維護費用全面解析",
+      "slug": "episode-02",
+      "title": "第2集：買澳洲房一定要知道的安心保障——FIRB是什麼？",
       "category": "overseas",
-      "categoryLabel": "海外買房",
-      "summary": "從選房、簽約到交割與持有成本，一次看懂海外購屋流程。",
-      "thumbnail": "assets/images/cls-buying-process.jpg"
+      "thumbnail": "assets/images/classroom/classroom-ep02-cover.jpg?v=20260723d",
+      "videoSrc": "assets/videos/classroom/classroom-ep02.mp4"
     },
     {
-      "slug": "melbourne-living",
-      "title": "為什麼要買在墨爾本？",
-      "category": "property",
-      "categoryLabel": "澳洲房產",
-      "summary": "墨爾本宜居優勢、核心區域與置產配置思路概覽。",
-      "thumbnail": "assets/images/cls-melbourne.jpg"
-    },
-    {
-      "slug": "sydney-cbd",
-      "title": "揭秘 CBD 的優質投資標的",
-      "category": "property",
-      "categoryLabel": "澳洲房產",
-      "summary": "雪梨 CBD 地段特性、租賃需求與現房／預售配置差異。",
-      "thumbnail": "assets/images/cls-sydney-cbd.jpg"
-    },
-    {
-      "slug": "overseas-loan",
-      "title": "澳洲海外人士身分對貸款影響",
+      "slug": "episode-03",
+      "title": "第3集：台灣人買澳洲房能貸款嗎？可以貸幾成？",
       "category": "overseas",
-      "categoryLabel": "海外買房",
-      "summary": "不同簽證與居民身分，對貸款資格與成數的常見影響。",
-      "thumbnail": "assets/images/cls-overseas-loan.jpg"
+      "thumbnail": "assets/images/classroom/classroom-ep03-cover.jpg?v=20260723d",
+      "videoSrc": "assets/videos/classroom/classroom-ep03.mp4"
     },
     {
-      "slug": "property-law",
-      "title": "澳洲不動產法規與保障（附案例）",
-      "category": "tax",
-      "categoryLabel": "稅務法規",
-      "summary": "買賣合約、律師角色與常見法規保障重點說明。",
-      "thumbnail": "assets/images/cls-property-law.jpg"
-    },
-    {
-      "slug": "commercial",
-      "title": "商業地產投資策略與機會",
-      "category": "property",
-      "categoryLabel": "澳洲房產",
-      "summary": "商業地產與住宅配置差異，以及評估時需關注的指標。",
-      "thumbnail": "assets/images/cls-commercial.jpg"
-    },
-    {
-      "slug": "off-plan",
-      "title": "租賃 vs 自住：配置策略概覽",
+      "slug": "episode-04",
+      "title": "第4集：海外買家置產成本！如何精算附加印花稅？",
       "category": "overseas",
-      "categoryLabel": "海外買房",
-      "summary": "依目標選擇自住或投資出租，影響戶型、地段與持有策略。",
-      "thumbnail": "assets/images/cls-off-plan.jpg"
+      "thumbnail": "assets/images/classroom/classroom-ep04-cover.jpg?v=20260723d",
+      "videoSrc": "assets/videos/classroom/classroom-ep04.mp4"
     },
     {
-      "slug": "firb-timeline",
-      "title": "FIRB 申請流程與注意事項",
+      "slug": "episode-05",
+      "title": "第5集：澳洲買房後的日常「持有成本」有哪些？",
       "category": "overseas",
-      "categoryLabel": "海外買房",
-      "summary": "FIRB 申請時程、費用概念與常見延誤原因提醒。",
-      "thumbnail": "assets/images/cls-firb-timeline.jpg"
+      "thumbnail": "assets/images/classroom/classroom-ep05-cover.jpg?v=20260723d",
+      "videoSrc": "assets/videos/classroom/classroom-ep05.mp4"
     },
     {
-      "slug": "property-mgmt",
-      "title": "澳洲物業管理流程全攻略",
-      "category": "management",
-      "categoryLabel": "物業管理",
-      "summary": "長租託管從招租、篩選到維修與報表的完整流程。",
-      "thumbnail": "assets/images/cls-property-mgmt.jpg"
+      "slug": "episode-06",
+      "title": "第6集：維持穩定租租收益，完美避開空置費！",
+      "category": "overseas",
+      "thumbnail": "assets/images/classroom/classroom-ep06-cover.jpg?v=20260723d",
+      "videoSrc": "assets/videos/classroom/classroom-ep06.mp4"
     },
     {
-      "slug": "sydney-weekend-guide",
-      "title": "雪梨週末散步：海港與市中心生活圈",
-      "category": "travel",
-      "categoryLabel": "旅遊生活",
-      "summary": "置產考察之餘，認識雪梨海港、市中心與北岸生活節奏。",
-      "thumbnail": "assets/images/cls-sydney-cbd.jpg"
+      "slug": "episode-07",
+      "title": "第7集：免飛澳洲！人在台灣怎麼跨海安全買房？",
+      "category": "overseas",
+      "thumbnail": "assets/images/classroom/classroom-ep07-cover.jpg?v=20260723d",
+      "videoSrc": "assets/videos/classroom/classroom-ep07.mp4"
     },
     {
-      "slug": "melbourne-food-trip",
-      "title": "墨爾本城市漫遊：咖啡、河岸與藝文區",
-      "category": "travel",
-      "categoryLabel": "旅遊生活",
-      "summary": "從南岸到 CBD，感受墨爾本宜居氛圍與區域生活機能。",
-      "thumbnail": "assets/images/cls-melbourne.jpg"
+      "slug": "episode-08",
+      "title": "第8集：為什麼海外投資客都搶著買澳洲「預售屋」？",
+      "category": "overseas",
+      "thumbnail": "assets/images/classroom/classroom-ep08-cover.jpg?v=20260723d",
+      "videoSrc": "assets/videos/classroom/classroom-ep08.mp4"
     },
     {
-      "slug": "brisbane-city-guide",
-      "title": "布里斯本輕旅行：陽光城市置產觀察",
-      "category": "travel",
-      "categoryLabel": "旅遊生活",
-      "summary": "布里斯本河岸與市中心散步路線，順便觀察新興置產熱區。",
-      "thumbnail": "assets/images/news-brisbane.jpg"
+      "slug": "episode-10",
+      "title": "第10集：買澳洲房產，可以順便拿澳洲身份移民嗎？",
+      "category": "overseas",
+      "thumbnail": "assets/images/classroom/classroom-ep10-cover.jpg?v=20260723d",
+      "videoSrc": "assets/videos/classroom/classroom-ep10.mp4"
     }
   ]
 }

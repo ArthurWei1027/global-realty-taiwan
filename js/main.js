@@ -65,7 +65,9 @@
   }
 
   function brandLockup() {
-    if (window.AGBrand) return window.AGBrand.brandLockupHtml();
+    if (window.AGBrand) {
+      return window.AGBrand.brandLockupHtml({ href: pageHref('index.html'), footer: true });
+    }
     return `<a href="index.html" class="brand-lockup"><span class="brand-lockup__primary">環球置業 Global Realty</span></a>`;
   }
 
@@ -193,7 +195,6 @@
         <div class="site-footer--nord__main">
           <div class="site-footer--nord__info">
             ${brandLockup()}
-            ${brandFrom()}
             <div class="site-footer--nord__office">
               <h4>大巨蛋辦公室 Taipei Dome Office</h4>
               <p>台北市信義區忠孝東路四段 525 號 14–15 樓<br>THE COLLECTIVE 巨蛋國際中心</p>

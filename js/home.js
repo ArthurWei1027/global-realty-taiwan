@@ -29,8 +29,35 @@
       .join('');
   }
 
+  function initHomeVideoPlaylist() {
+    const video = document.getElementById('home-video-player');
+    if (!video) return;
+
+    const playlist = [
+      'assets/videos/home/home-intro.mp4',
+      'assets/videos/home/home-burwood-opening.mp4',
+      'assets/videos/home/home-sydney-opening.mp4',
+    ];
+
+    let index = 0;
+
+    function loadVideo(nextIndex, autoplay) {
+      index = (nextIndex + playlist.length) % playlist.length;
+      video.src = playlist[index];
+      video.load();
+      if (autoplay) {
+        video.play().catch(function () {});
+      }
+    }
+
+    video.addEventListener('ended', function () {
+      loadVideo(index + 1, true);
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', async () => {
     if (document.body.dataset.page !== 'home') return;
+    initHomeVideoPlaylist();
     const properties = await loadProperties();
     renderFeaturedProperties(properties);
   });

@@ -1,36 +1,59 @@
 (function () {
   const GR_MARK = 'assets/images/brands/global-realty-mark.svg';
   const AG_MARK = 'assets/images/brands/award-global-mark.svg';
-  const HEADER_LOCKUP = 'assets/images/brands/header-lockup-tw.png';
+  const BRAND_BANNER = 'assets/images/brands/header-lockup-tw.png';
+  const BANNER_ALT = '澳華國際集團 Award Global · 環球置業 Global Realty · 澳德亞太';
+
+  const BANNER_SIZES = {
+    header: { width: 396, height: 48 },
+    footer: { width: 340, height: 41 },
+    hero: { width: 480, height: 58 },
+    inline: { width: 396, height: 48 },
+  };
+
+  function brandBannerHtml(options = {}) {
+    const { href = 'index.html', variant = 'inline', decorative = false } = options;
+    const size = BANNER_SIZES[variant] || BANNER_SIZES.inline;
+    const className = `brand-banner brand-banner--${variant}`;
+
+    if (decorative) {
+      return `
+        <div class="${className}" role="img" aria-label="${BANNER_ALT}">
+          <img src="${BRAND_BANNER}" alt="" width="${size.width}" height="${size.height}" decoding="async">
+        </div>`;
+    }
+
+    return `
+      <a href="${href}" class="${className}" aria-label="${BANNER_ALT}">
+        <img src="${BRAND_BANNER}" alt="${BANNER_ALT}" width="${size.width}" height="${size.height}" decoding="async">
+      </a>`;
+  }
 
   function brandHeaderHtml(options = {}) {
     const { href = 'index.html' } = options;
-    return `
-      <a href="${href}" class="brand-header-logo" aria-label="環球置業 Global Realty · 澳華國際集團 Award Global · 台灣">
-        <img src="${HEADER_LOCKUP}" alt="環球置業 Global Realty · 澳華國際集團 Award Global · 台灣" width="320" height="39" decoding="async">
-      </a>`;
+    return brandBannerHtml({ href, variant: 'header' }).replace(
+      'brand-banner brand-banner--header',
+      'brand-header-logo brand-banner brand-banner--header'
+    );
   }
 
   function brandLockupHtml(options = {}) {
-    const { href = 'index.html', markSize = '', footer = false } = options;
-    const markClass = markSize ? ` brand-lockup__mark--${markSize}` : '';
-    return `
-      <a href="${href}" class="brand-lockup site-logo--meta">
-        <img class="brand-lockup__mark${markClass}" src="${GR_MARK}" alt="環球置業 Global Realty" width="40" height="42">
-        <span class="brand-lockup__text">
-          <span class="brand-lockup__primary">環球置業 <span class="brand-lockup__primary-en">Global Realty</span></span>
-        </span>
-      </a>`;
+    const { href = 'index.html', footer = false } = options;
+    return brandBannerHtml({ href, variant: footer ? 'footer' : 'inline' });
   }
 
   function brandFromHtml() {
-    return `
-      <a href="group.html" class="brand-from" aria-label="了解澳華國際集團">
-        <span class="brand-from__label">from</span>
-        <img class="brand-from__mark" src="${AG_MARK}" alt="澳華國際 Award Global" width="16" height="16">
-        <span>澳華國際集團 Award Global</span>
-      </a>`;
+    return '';
   }
 
-  window.AGBrand = { brandHeaderHtml, brandLockupHtml, brandFromHtml, GR_MARK, AG_MARK, HEADER_LOCKUP };
+  window.AGBrand = {
+    brandBannerHtml,
+    brandHeaderHtml,
+    brandLockupHtml,
+    brandFromHtml,
+    GR_MARK,
+    AG_MARK,
+    BRAND_BANNER,
+    HEADER_LOCKUP: BRAND_BANNER,
+  };
 })();

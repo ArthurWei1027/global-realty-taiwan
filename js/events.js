@@ -3,7 +3,7 @@
 
   async function loadEvents() {
     try {
-      const response = await fetch('data/events.json');
+      const response = await fetch(`data/events.json?v=${window.GR_EVENTS_VERSION || '20260723'}`);
       if (!response.ok) throw new Error('Failed to load events');
       const data = await response.json();
       return data.events || [];

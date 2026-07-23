@@ -236,7 +236,7 @@ async function initHomeEventCarousel() {
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.body.dataset.page === 'events') {
-    new NewsRenderer({ withImage: true });
+    new NewsRenderer({ withImage: true, category: 'event' });
   }
   if (document.body.dataset.page === 'home') {
     initHomeEventCarousel();
