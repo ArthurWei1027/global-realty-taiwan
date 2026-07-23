@@ -53,6 +53,12 @@
     video.addEventListener('ended', function () {
       loadVideo(index + 1, true);
     });
+
+    video.addEventListener('error', function () {
+      if (video.error && index < playlist.length - 1) {
+        loadVideo(index + 1, false);
+      }
+    });
   }
 
   document.addEventListener('DOMContentLoaded', async () => {
