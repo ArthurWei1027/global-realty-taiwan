@@ -1,7 +1,7 @@
 (function () {
   const GR_MARK = 'assets/images/brands/global-realty-mark.svg';
   const AG_MARK = 'assets/images/brands/award-global-mark.svg';
-  const BRAND_BANNER = 'assets/images/brands/header-lockup-tw.png';
+  const BRAND_BANNER = 'assets/images/brands/header-lockup-tw.png?v=20260727';
   const BANNER_ALT = '澳華國際集團 Award Global · 環球置業 Global Realty · 澳德亞太';
 
   const BANNER_SIZES = {

@@ -34,6 +34,7 @@
     if (!video) return;
 
     const playlist = [
+      'assets/videos/home/home-brand-promo-zh.mp4?v=20260727k',
       'assets/videos/home/home-intro.mp4?v=20260723b',
       'assets/videos/home/home-burwood-opening.mp4?v=20260723b',
       'assets/videos/home/home-sydney-opening.mp4?v=20260723b',

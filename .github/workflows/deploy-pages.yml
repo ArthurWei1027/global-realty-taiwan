@@ -28,6 +28,7 @@ jobs:
 
       - name: Verify homepage video assets
         run: |
+          test "$(stat -c%s assets/videos/home/home-brand-promo-zh.mp4)" -gt 1000000
           test "$(stat -c%s assets/videos/home/home-intro.mp4)" -gt 1000000
 
       - name: Setup Pages
