@@ -1,6 +1,86 @@
 window.AG_PROPERTIES = {
   "properties": [
     {
+      "slug": "armida-rochedale",
+      "name": "Armida",
+      "city": "brisbane",
+      "cityLabel": "布里斯本",
+      "district": "rochedale",
+      "districtLabel": "Rochedale",
+      "type": "townhouse",
+      "typeLabel": "聯排別墅",
+      "status": "established",
+      "statusLabel": "現房",
+      "featured": true,
+      "priceLabel": "澳元 $1,370,000 起（僅剩 4 套，如有變動恕不另行通知）",
+      "yieldRange": "",
+      "summary": "布里斯本南部 Rochedale 四房聯排別墅，Red Door 現代設計，尾盤稀缺，由環球置業代理銷售。",
+      "image": "assets/images/armida.jpg",
+      "imageAlt": "Armida Rochedale 四房聯排別墅外觀",
+      "ctaType": "floorplan",
+      "ctaLabel": "索取未公開平面圖"
+    },
+    {
+      "slug": "leaf-four-solis",
+      "name": "Leaf Four Solis",
+      "city": "brisbane",
+      "cityLabel": "布里斯本",
+      "district": "sunnybank",
+      "districtLabel": "Sunnybank",
+      "type": "townhouse",
+      "typeLabel": "聯排別墅",
+      "status": "off-plan",
+      "statusLabel": "預售",
+      "featured": true,
+      "priceLabel": "澳元 $1,375,000 – $1,550,000（如有變動恕不另行通知）",
+      "yieldRange": "",
+      "summary": "Sunnybank 華人生活圈僅 27 戶四房聯排別墅，SC Urban 開發，六星能效，由環球置業代理銷售。",
+      "image": "assets/images/leaf-four-solis.jpg",
+      "imageAlt": "Leaf Four Solis Sunnybank 四房聯排別墅",
+      "ctaType": "floorplan",
+      "ctaLabel": "索取未公開平面圖"
+    },
+    {
+      "slug": "the-abbotsford",
+      "name": "The Abbotsford",
+      "city": "brisbane",
+      "cityLabel": "布里斯本",
+      "district": "bowen-hills",
+      "districtLabel": "Bowen Hills",
+      "type": "apartment",
+      "typeLabel": "公寓",
+      "status": "off-plan",
+      "statusLabel": "預售",
+      "featured": false,
+      "priceLabel": "2 房約澳元 $1,320,000 起（如有變動恕不另行通知）",
+      "yieldRange": "",
+      "summary": "Bowen Hills 遺產建築 Abbotsford House 圍合的精品內城公寓，步行約 1 分鐘至火車站。",
+      "image": "assets/images/the-abbotsford.jpg",
+      "imageAlt": "The Abbotsford Bowen Hills 精品公寓",
+      "ctaType": "floorplan",
+      "ctaLabel": "索取未公開平面圖"
+    },
+    {
+      "slug": "cypress-palms",
+      "name": "Cypress Palms",
+      "city": "gold-coast",
+      "cityLabel": "黃金海岸",
+      "district": "surfers-paradise",
+      "districtLabel": "Surfers Paradise",
+      "type": "apartment",
+      "typeLabel": "公寓",
+      "status": "off-plan",
+      "statusLabel": "預售",
+      "featured": false,
+      "priceLabel": "價格請洽專屬顧問",
+      "yieldRange": "",
+      "summary": "Surfers Paradise 昆士蘭標竿高度雙塔海景公寓，Meriton 匠心打造，距海灘約 150 米。",
+      "image": "assets/images/cypress-palms.jpg",
+      "imageAlt": "Cypress Palms Surfers Paradise 海景公寓",
+      "ctaType": "floorplan",
+      "ctaLabel": "索取未公開平面圖"
+    },
+    {
       "slug": "623-collins",
       "name": "623 Collins",
       "city": "melbourne",
@@ -11,7 +91,7 @@ window.AG_PROPERTIES = {
       "typeLabel": "公寓",
       "status": "off-plan",
       "statusLabel": "預售",
-      "featured": true,
+      "featured": false,
       "priceLabel": "價格請洽專屬顧問",
       "yieldRange": "參考租金回報區間 4.5%–5.5%",
       "summary": "Collins Street 經典地標重生，新舊建築共融的 42 層精品住宅，由環球置業代理銷售。",
@@ -31,7 +111,7 @@ window.AG_PROPERTIES = {
       "typeLabel": "公寓",
       "status": "off-plan",
       "statusLabel": "預售",
-      "featured": true,
+      "featured": false,
       "priceLabel": "價格請洽專屬顧問",
       "yieldRange": "參考租金回報區間 4.2%–5.0%",
       "summary": "墨爾本廣場旗艦住宅塔樓，約 67 層垂直分層設計，由環球置業代理銷售。",
@@ -71,7 +151,7 @@ window.AG_PROPERTIES = {
       "typeLabel": "公寓",
       "status": "established",
       "statusLabel": "現房",
-      "featured": true,
+      "featured": false,
       "priceLabel": "價格請洽專屬顧問",
       "yieldRange": "參考租金回報區間 4.0%–4.8%",
       "summary": "雪梨 CBD 精選現房公寓，即買即租配置方案。",
@@ -243,6 +323,130 @@ window.AG_PROPERTY_DETAILS = {
       "現房交易，流程明確、交割快速",
       "即買即租配置方案，由 GR Leasing 銜接租賃管理",
       "雪梨 CBD 核心地段，配套成熟"
+    ]
+  },
+  "armida-rochedale": {
+    "heroTagline": "Rochedale 四房聯排｜僅剩 4 套",
+    "address": "Rochedale QLD（布里斯本南部）",
+    "facts": [
+      { "label": "地點", "value": "Rochedale，布里斯本南部綠意社區" },
+      { "label": "狀態", "value": "現房 Established" },
+      { "label": "類型", "value": "四房聯排別墅（Townhouse）" },
+      { "label": "建築設計", "value": "Red Door" },
+      { "label": "起價", "value": "澳元 $1,370,000 起" },
+      { "label": "銷售代理", "value": "環球置業 Global Realty · Nick Li" }
+    ],
+    "overview": [
+      "Armida 位於布里斯本南部 Rochedale，以 Red Door 現代建築設計融入綠意社區，提供開放式廚房、石材台面與大面窗採光，適合重視學區與家庭尺度的自住買家。",
+      "目前尾盤僅剩少量戶型釋出，詳細 Lot 配置、面積與最新價格請洽環球置業布里斯本團隊。價格如有變動恕不另行通知。"
+    ],
+    "location": {
+      "lead": "Rochedale 兼具南部家庭生活圈與快速通勤優勢。",
+      "items": [
+        "距布里斯本 CBD 約 17 公里，M1／Gateway 快速通往機場與黃金海岸",
+        "近 Eight Mile Plains 公車軌道接駁",
+        "學區含 Redeemer Lutheran College、Rochedale State High、Griffith University",
+        "Rochedale Village／Westfield Mt Gravatt 等零售與生活配套"
+      ]
+    },
+    "highlights": [
+      "四房聯排別墅，非公寓產品",
+      "Red Door 現代設計與開放式生活空間",
+      "南部學區與綠意社區定位",
+      "尾盤稀缺，建議及早預約看屋"
+    ]
+  },
+  "leaf-four-solis": {
+    "heroTagline": "Sunnybank 僅 27 戶｜四房聯排別墅",
+    "address": "255 Beenleigh Road, Sunnybank QLD 4109",
+    "facts": [
+      { "label": "地點", "value": "Sunnybank，布里斯本華人生活圈核心" },
+      { "label": "狀態", "value": "預售 Off-the-plan" },
+      { "label": "開發商", "value": "SC Urban" },
+      { "label": "戶數", "value": "27 戶四房聯排別墅" },
+      { "label": "價格帶", "value": "澳元 $1,375,000 – $1,550,000" },
+      { "label": "銷售代理", "value": "環球置業 Global Realty · Nick Li" }
+    ],
+    "overview": [
+      "Leaf Four Solis 由 SC Urban 開發，位於 Sunnybank 核心地段，全案僅 27 戶四房聯排別墅，低密規劃結合現代立面、石材與原木質感、挑高客廳與私人露台庭院。",
+      "項目具六星能源評級，全屋精裝交付。完工與交付批次以合約及最新項目資料為準，價格如有變動恕不另行通知。"
+    ],
+    "location": {
+      "lead": "Sunnybank 是布里斯本最具代表性的華人生活圈之一。",
+      "items": [
+        "Banoon 火車站步行約 600 米，M3 約 15–20 分鐘至 CBD",
+        "Sunnybank Plaza、Market Square 與多元亞洲餐飲零售",
+        "Sunnybank State School／High School 等教育資源",
+        "Griffith University 約 4.5 公里；Sunnybank Private Hospital 等醫療配套"
+      ]
+    },
+    "highlights": [
+      "27 戶低密四房聯排，非公寓",
+      "Sunnybank 華人生活圈核心位置",
+      "六星能源評級與精裝交付",
+      "Banoon 站近距離，通勤便利"
+    ]
+  },
+  "the-abbotsford": {
+    "heroTagline": "Bowen Hills 遺產公寓｜內城生活",
+    "address": "23–39 Abbotsford Road, Bowen Hills, Brisbane",
+    "facts": [
+      { "label": "地點", "value": "Bowen Hills，布里斯本內城" },
+      { "label": "狀態", "value": "預售 Off-the-plan" },
+      { "label": "類型", "value": "精品公寓（2 房／3 房）" },
+      { "label": "遺產建築", "value": "Abbotsford House（1879）" },
+      { "label": "起價參考", "value": "2 房約澳元 $1,320,000 起" },
+      { "label": "銷售代理", "value": "環球置業 Global Realty · Nick Li" }
+    ],
+    "overview": [
+      "The Abbotsford 以兩座住宅塔樓圍合歷史建築 Abbotsford House，中央庭院連結遺產空間與現代住宅，提供大面寬採光、跨向通風與城市天際線景觀。",
+      "項目鄰近 Bowen Hills 火車站與 Newstead、Gasworks 等內城生活圈，適合重視軌道通勤與都會生活的買家。價格如有變動恕不另行通知。"
+    ],
+    "location": {
+      "lead": "Bowen Hills 是布里斯本內城與新興生活圈交會的核心位置。",
+      "items": [
+        "Bowen Hills Station 步行約 1 分鐘",
+        "Newstead、Gasworks、King Street、James Street 生活圈",
+        "Royal Brisbane Hospital 約 1.4 公里",
+        "屋頂泳池、燒烤與觀景平台等社區配套"
+      ]
+    },
+    "highlights": [
+      "遺產建築與現代公寓共生設計",
+      "內城軌道通勤核心",
+      "2 房／3 房多元選擇",
+      "Newstead 生活圈近在咫尺"
+    ]
+  },
+  "cypress-palms": {
+    "heroTagline": "Surfers Paradise 海景公寓",
+    "address": "3–7 Cypress Avenue, Surfers Paradise QLD",
+    "facts": [
+      { "label": "地點", "value": "Surfers Paradise，黃金海岸核心" },
+      { "label": "狀態", "value": "預售 Off-the-plan" },
+      { "label": "建商", "value": "Meriton／Karimbla Constructions" },
+      { "label": "設計", "value": "DBI Architects" },
+      { "label": "規模", "value": "雙塔高層，高度逾 300 米" },
+      { "label": "銷售代理", "value": "環球置業 Global Realty" }
+    ],
+    "overview": [
+      "Cypress Palms 位於 Surfers Paradise 北端核心，為 Meriton 打造的標竿級雙塔海景公寓，距海灘約 150 米，提供 1 房至 4 房多元戶型與豐富空中度假平台配套。",
+      "項目配備 BOSCH 廚電、Cosentino 台面等精裝配置，並享有 G:Link 輕軌門口交通優勢。最新戶型與價格請洽專屬顧問。"
+    ],
+    "location": {
+      "lead": "Surfers Paradise 匯聚海景、度假與都會配套。",
+      "items": [
+        "Cypress Avenue G:Link 輕軌站門口",
+        "步行可達海灘與核心零售餐飲",
+        "8 層空中度假平台、350+ 平方米瀉湖泳池",
+        "32 層健康中心與多元住戶會所"
+      ]
+    },
+    "highlights": [
+      "昆士蘭標竿高度雙塔地標",
+      "Meriton 品牌與全澳開發經驗",
+      "距海灘約 150 米",
+      "輕軌交通與四向景觀資源"
     ]
   }
 };

@@ -1276,6 +1276,50 @@ body[data-page="home"] .brand-lockup__primary-en {
   line-height: 1.85;
 }
 
+.team-advisors {
+  margin-top: var(--space-10);
+  display: grid;
+  gap: var(--space-6);
+}
+
+.team-group__subtitle {
+  margin: 0 0 var(--space-2);
+  font-size: var(--font-size-lg);
+  color: var(--color-primary-navy);
+}
+
+.team-advisor {
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-bg-card-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.team-advisor__name {
+  margin: 0 0 var(--space-1);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light-main);
+}
+
+.team-advisor__role {
+  margin: 0 0 var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--home-accent, #2d7a7a);
+}
+
+.team-advisor__text {
+  margin: 0;
+  color: var(--color-text-light-muted);
+  line-height: 1.85;
+}
+
+@media (min-width: 900px) {
+  .team-advisors {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 900px) {
   .team-profiles--sales,
   .team-profiles--leasing {
