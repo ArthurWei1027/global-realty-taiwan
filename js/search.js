@@ -100,7 +100,7 @@
       .map((v) =>
         resultCard(
           {
-            href: `/classroom#${v.slug}`,
+            href: `classroom.html#${v.slug}`,
             tag: '澳洲不動產小課堂',
             title: v.title,
           },

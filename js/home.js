@@ -39,10 +39,10 @@
     if (!video) return;
 
     const playlist = [
-      'assets/videos/global-realty-brand-film-web.mp4?v=20260804',
-      'assets/videos/generated/project-tallawong-green-zh.mp4?v=20260804',
-      'assets/videos/generated/project-623-collins-zh.mp4?v=20260804',
-      'assets/videos/generated/project-aura-melbourne-square-zh.mp4?v=20260804',
+      'assets/videos/global-realty-brand-film-web.mp4?v=20260811',
+      'assets/videos/home/home-sydney-opening.mp4?v=20260811',
+      'assets/videos/projects/project-623-collins-zh.mp4?v=20260811',
+      'assets/videos/projects/project-aura-melbourne-square-zh.mp4?v=20260811',
     ];
 
     let index = 0;

@@ -5,7 +5,7 @@
 
   async function loadVideos() {
     try {
-      const response = await fetch('data/classroom.json?v=20260804-video-library');
+      const response = await fetch('data/classroom.json?v=20260811-video-library');
       if (!response.ok) throw new Error('Failed to load classroom');
       const data = await response.json();
       return data.videos || [];
