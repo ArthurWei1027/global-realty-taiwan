@@ -27,6 +27,11 @@
     container.innerHTML = featured
       .map((property) => window.GRPropertyCards.renderPropertyCard(property))
       .join('');
+
+    container.querySelectorAll('.property-card__image').forEach((image) => {
+      image.loading = 'eager';
+      image.decoding = 'async';
+    });
   }
 
   function initHomeVideoPlaylist() {
@@ -34,10 +39,10 @@
     if (!video) return;
 
     const playlist = [
-      'assets/videos/home/home-brand-promo-zh.mp4?v=20260727k',
-      'assets/videos/home/home-intro.mp4?v=20260723b',
-      'assets/videos/home/home-burwood-opening.mp4?v=20260723b',
-      'assets/videos/home/home-sydney-opening.mp4?v=20260723b',
+      'assets/videos/global-realty-brand-film-web.mp4?v=20260804',
+      'assets/videos/generated/project-tallawong-green-zh.mp4?v=20260804',
+      'assets/videos/generated/project-623-collins-zh.mp4?v=20260804',
+      'assets/videos/generated/project-aura-melbourne-square-zh.mp4?v=20260804',
     ];
 
     let index = 0;

@@ -1,6 +1,17 @@
 {
   "news": [
     {
+      "slug": "study-abroad-country-2026",
+      "date": "2026-08",
+      "dateLabel": "2026 年 8 月",
+      "category": "event",
+      "categoryLabel": "最新活動",
+      "title": "台灣孩子留學，到底該選哪個國家？",
+      "summary": "8/15 台北文華東方、8/16 Taipei 101 Space 88 樓，從安全、花費、畢業留任、移民難度與資產配置角度，協助家長比較多國留學路徑。",
+      "featured": true,
+      "image": "assets/images/optimized/gallery/event-study-abroad-0815-card.jpg"
+    },
+    {
       "slug": "taipei-101-briefing-2026",
       "date": "2026-06",
       "dateLabel": "2026 年 6 月",

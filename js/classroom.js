@@ -5,7 +5,7 @@
 
   async function loadVideos() {
     try {
-      const response = await fetch('data/classroom.json?v=20260723d');
+      const response = await fetch('data/classroom.json?v=20260804-video-library');
       if (!response.ok) throw new Error('Failed to load classroom');
       const data = await response.json();
       return data.videos || [];
@@ -19,13 +19,41 @@
     const tag = video.categoryLabel
       ? `<span class="classroom-card__tag">${video.categoryLabel}</span>`
       : '';
+    const summary = video.summary
+      ? `<p class="classroom-card__summary">${video.summary}</p>`
+      : '';
+
+    if (embed && video.embedUrl) {
+      return `
+      <article class="classroom-card classroom-card--video classroom-card--embed" id="${video.slug}">
+        <div class="classroom-card__media classroom-card__media--embed">
+          <button
+            class="classroom-card__video-launch"
+            type="button"
+            data-embed-url="${video.embedUrl}"
+            data-video-title="${video.title}"
+            aria-label="播放：${video.title}">
+            <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" width="640" height="360">
+            <span class="classroom-card__play" aria-hidden="true">▶</span>
+          </button>
+        </div>
+        ${tag}
+        <h3 class="classroom-card__title">${video.title}</h3>
+        ${summary}
+      </article>
+    `;
+    }
 
     if (embed && video.videoSrc) {
+      const isWide = video.videoLayout === 'wide';
+      const cardClass = isWide ? ' classroom-card--wide' : '';
+      const mediaClass = isWide ? ' classroom-card__media--wide' : '';
+      const videoClass = isWide ? ' classroom-card__video--wide' : '';
       return `
-      <article class="classroom-card classroom-card--video" id="${video.slug}">
-        <div class="classroom-card__media">
+      <article class="classroom-card classroom-card--video${cardClass}" id="${video.slug}">
+        <div class="classroom-card__media${mediaClass}">
           <video
-            class="classroom-card__video"
+            class="classroom-card__video${videoClass}"
             controls
             playsinline
             preload="none"
@@ -36,7 +64,9 @@
             您的瀏覽器不支援影片播放。
           </video>
         </div>
+        ${tag}
         <h3 class="classroom-card__title">${video.title}</h3>
+        ${summary}
       </article>
     `;
     }
@@ -49,8 +79,27 @@
         </span>
         ${tag}
         <span class="classroom-card__title">${video.title}</span>
+        ${summary}
       </a>
     `;
+  }
+
+  function initVideoLaunch() {
+    document.addEventListener('click', (event) => {
+      const button = event.target.closest('.classroom-card__video-launch');
+      if (!button) return;
+      const embedUrl = button.dataset.embedUrl;
+      if (!embedUrl) return;
+      const title = button.dataset.videoTitle || '教學影片';
+      const iframe = document.createElement('iframe');
+      iframe.className = 'classroom-card__iframe';
+      iframe.src = `${embedUrl}${embedUrl.includes('?') ? '&' : '?'}autoplay=1`;
+      iframe.title = title;
+      iframe.loading = 'lazy';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      button.replaceWith(iframe);
+    });
   }
 
   function filteredVideos() {
@@ -99,16 +148,37 @@
     });
   }
 
+  function restoreCategoryFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    category = params.get('category') || '';
+  }
+
+  function updateCategoryUrl() {
+    const params = new URLSearchParams(window.location.search);
+    if (category) params.set('category', category);
+    else params.delete('category');
+    const query = params.toString();
+    const url = `${window.location.pathname}${query ? `?${query}` : ''}#classroom-top`;
+    history.replaceState(null, '', url);
+  }
+
+  function syncActiveFilter(filterNav) {
+    filterNav.querySelectorAll('[data-category]').forEach((el) => {
+      el.classList.toggle('is-active', (el.dataset.category || '') === category);
+    });
+  }
+
   function initFilters() {
     const filterNav = document.querySelector('.classroom-sidebar .news-sidebar__filters');
     if (!filterNav) return;
+    syncActiveFilter(filterNav);
 
     filterNav.querySelectorAll('[data-category]').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         category = btn.dataset.category || '';
-        filterNav.querySelectorAll('[data-category]').forEach((el) => el.classList.remove('is-active'));
-        btn.classList.add('is-active');
+        syncActiveFilter(filterNav);
+        updateCategoryUrl();
         renderFull();
       });
     });
@@ -124,7 +194,9 @@
 
   document.addEventListener('DOMContentLoaded', async () => {
     allVideos = await loadVideos();
+    initVideoLaunch();
     if (document.body.dataset.page === 'classroom') {
+      restoreCategoryFromUrl();
       renderFull();
       initSearch();
       initFilters();

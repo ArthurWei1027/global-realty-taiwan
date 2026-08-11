@@ -14,7 +14,7 @@ class NewsRenderer {
 
   async init() {
     try {
-      const response = await fetch('data/news.json');
+      const response = await fetch(`data/news.json?v=${window.GR_NEWS_VERSION || '20260804-study-abroad'}`);
       if (!response.ok) throw new Error('Failed to load news');
       const data = await response.json();
       this.allNews = data.news || [];
@@ -165,7 +165,7 @@ async function initHomeEventCarousel() {
 
   let items = [];
   try {
-    const response = await fetch('data/news.json');
+    const response = await fetch(`data/news.json?v=${window.GR_NEWS_VERSION || '20260804-study-abroad'}`);
     if (!response.ok) throw new Error('Failed to load news');
     const data = await response.json();
     items = (data.news || []).filter((n) => n.featured);

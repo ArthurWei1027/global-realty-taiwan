@@ -100,7 +100,7 @@
           </div>
           <div class="event-detail-head__actions">
             <a href="${posterSrc}" class="btn btn-nord" download>下載海報</a>
-            <a href="${event.ctaUrl || 'index.html#consult'}" class="btn btn-secondary">${event.ctaLabel || '預約諮詢'}</a>
+            <a href="${event.ctaUrl || '/#consult'}" class="btn btn-secondary">${event.ctaLabel || '預約諮詢'}</a>
           </div>
         </div>
       </section>

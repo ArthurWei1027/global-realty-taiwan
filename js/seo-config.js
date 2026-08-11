@@ -8,11 +8,12 @@
       url: 'https://www.awardglobal.com.au/',
     },
     previewBase: 'https://arthurwei1027.github.io/global-realty-taiwan',
-    productionBase: 'https://www.awardglobal.com.au',
+    productionBase: 'https://arthurwei1027.github.io/global-realty-taiwan',
     usePreviewBase: true,
+    sitePath: '/global-realty-taiwan',
     locale: 'zh-Hant',
-    email: 'arthurwei@globalrealty.com.au',
-    defaultOgImage: 'assets/images/hero-home.jpg',
+    email: 'taiwanmkt@globalrealty.com.au',
+    defaultOgImage: 'assets/images/optimized/hero-home.jpg',
     localBusinesses: [
       {
         name: '環球置業 Global Realty · 台北 101 辦公室',

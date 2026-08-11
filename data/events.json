@@ -1,6 +1,39 @@
 {
   "events": [
     {
+      "slug": "study-abroad-country-2026",
+      "series": "study-abroad-family-seminar",
+      "status": "upcoming",
+      "featured": true,
+      "category": "seminar",
+      "categoryLabel": "說明會系列",
+      "date": "2026-08-15",
+      "dateLabel": "2026/8/15-8/16",
+      "dateDisplay": "2026 / 08 / 15 (六) 台北文華東方酒店 B2；2026 / 08 / 16 (日) Taipei 101 Space 88 樓 · 13:00 入場",
+      "title": "台灣孩子留學，到底該選哪個國家？",
+      "summary": "留學家庭必聽講座，從安全、花費、畢業留任、移民難度與資產配置角度，協助家長比較多國留學路徑，建立更客觀的家庭決策框架。",
+      "image": "assets/images/optimized/gallery/event-study-abroad-0815-card.jpg",
+      "imageAlt": "留學花幾百萬到底值不值得講座海報",
+      "heroImage": "assets/images/optimized/gallery/event-study-abroad-0815-card.jpg",
+      "posterImage": "assets/images/optimized/gallery/event-study-abroad-0815-poster.jpg",
+      "location": "8/15 台北文華東方酒店 B2；8/16 Taipei 101 Space 88 樓",
+      "typeLabel": "留學與資產配置講座",
+      "ctaLabel": "填表免費預約",
+      "ctaUrl": "/#consult",
+      "introLead": "台灣孩子留學，到底該選哪個國家？",
+      "body": [
+        "本場講座面向正在規劃孩子海外升學的台灣家庭，從安全、花費、畢業留任、移民難度等家長最關心的面向，協助比較不同國家的留學路徑與真實回本邏輯。",
+        "澳洲留學專家將在現場分享升學與生活規劃重點，並結合資產配置角度，說明家庭如何把教育支出、居住安排與未來資產持有一起納入長期規劃。",
+        "活動採免費講座限額開放，13:00 入場，現場提供家長一對一諮詢。歡迎提前填表預約，以便保留席位並安排專人接待。"
+      ],
+      "details": [
+        { "label": "活動場次", "value": "8/15（六）台北文華東方酒店 B2；8/16（日）Taipei 101 Space 88 樓" },
+        { "label": "入場時間", "value": "13:00 入場" },
+        { "label": "適合對象", "value": "規劃孩子海外留學、希望同步評估資產配置與家庭居住安排的家長" },
+        { "label": "報名方式", "value": "官網諮詢表單免費預約" }
+      ]
+    },
+    {
       "slug": "taipei-101-seminar",
       "series": "taipei-101-seminar",
       "status": "upcoming",
@@ -19,7 +52,7 @@
       "location": "台北市松山區敦化北路 158 號 · 台北文華東方",
       "typeLabel": "置產說明會",
       "ctaLabel": "預約下一場",
-      "ctaUrl": "index.html#consult",
+      "ctaUrl": "/#consult",
       "introLead": "環球置業 · 台北文華東方 · 澳洲置產說明會",
       "body": [
         "環球置業定期於台北文華東方舉辦澳洲置產說明會，為台灣高資產客戶解析雪梨、墨爾本核心商圈最新樓市動態，並分享海外買家須知的 FIRB 申請、稅務與交割流程要點。",
@@ -51,7 +84,7 @@
       "location": "台北市信義區信義路五段 7 號 · 台北 101 88 樓",
       "typeLabel": "主題品鑑會",
       "ctaLabel": "預約席位",
-      "ctaUrl": "index.html#consult",
+      "ctaUrl": "/#consult",
       "introLead": "環球置業 · 台北 101 · AURA 澳洲資產配置紅酒品鑑會",
       "body": [
         "環球置業於台北 101 88 樓舉辦台北場限定 AURA 專場，以紅酒品鑑搭配澳洲資產配置分享，為貴賓介紹墨爾本南岸河景旗艦建案 AURA 的區位優勢與置產策略。",
@@ -83,7 +116,7 @@
       "location": "台北市信義區信義路五段 7 號 · 台北 101 45 樓",
       "typeLabel": "置產說明會",
       "ctaLabel": "預約下一場說明會",
-      "ctaUrl": "event.html?slug=taipei-101-seminar",
+      "ctaUrl": "/event?slug=taipei-101-seminar",
       "introLead": "2026 年 6 月 · 台北 101 說明會精彩回顧",
       "body": [
         "2026 年 6 月，環球置業於台北 101 亞太運營中心舉辦澳洲置產說明會，現場吸引多位對雪梨、墨爾本置產有興趣的貴賓參與。",
@@ -109,11 +142,11 @@
       "image": "assets/images/gallery/event-still-07.jpg",
       "imageAlt": "文華東方品鑑會來賓交流",
       "heroImage": "assets/images/gallery/event-still-08.jpg",
-      "posterImage": "assets/images/gallery/event-mo-2.jpg",
+      "posterImage": "assets/images/optimized/gallery/event-mo-2.jpg",
       "location": "台北市松山區民生東路三段 158 號 · 文華東方酒店",
       "typeLabel": "主題品鑑會",
       "ctaLabel": "索取下一場活動資訊",
-      "ctaUrl": "events.html",
+      "ctaUrl": "/events",
       "introLead": "2026 年 6 月 · 文華東方品鑑會精彩回顧",
       "body": [
         "環球置業於文華東方酒店舉辦紅酒置產品鑑會，在輕鬆的氛圍中結合澳洲紅酒體驗與墨爾本置產分享，為貴賓帶來兼具質感與實用資訊的午後時光。",

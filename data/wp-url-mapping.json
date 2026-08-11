@@ -1,23 +1,23 @@
 {
   "version": "2026-07-09",
   "notes": "靜態站 URL → WordPress 建議 slug。正式網域待 Dony 確認後替換 {base}。",
-  "basePreview": "https://arthurwei1027.github.io/global-realty-taiwan",
+  "basePreview": "https://global-realty-taiwan-20260807.bloomy-pear-3463.chatgpt.site",
   "baseProduction": "https://www.awardglobal.com.au",
   "pages": [
     {
-      "static": "index.html",
+      "static": "/",
       "wpPath": "/",
       "type": "front-page",
       "title": "首頁"
     },
     {
-      "static": "properties.html",
+      "static": "/properties",
       "wpPath": "/properties/",
       "type": "archive",
       "title": "精選建案"
     },
     {
-      "static": "property.html?slug=623-collins",
+      "static": "/property?slug=623-collins",
       "wpPath": "/property/623-collins/",
       "type": "single",
       "cpt": "property",
@@ -25,7 +25,7 @@
       "title": "623 Collins"
     },
     {
-      "static": "property.html?slug=aura-melbourne-square",
+      "static": "/property?slug=aura-melbourne-square",
       "wpPath": "/property/aura-melbourne-square/",
       "type": "single",
       "cpt": "property",
@@ -33,7 +33,15 @@
       "title": "Aura Melbourne Square"
     },
     {
-      "static": "property.html?slug=sydney-harbour-collection",
+      "static": "/property?slug=tallawong-green",
+      "wpPath": "/property/tallawong-green/",
+      "type": "single",
+      "cpt": "property",
+      "slug": "tallawong-green",
+      "title": "Tallawong Green"
+    },
+    {
+      "static": "/property?slug=sydney-harbour-collection",
       "wpPath": "/property/sydney-harbour-collection/",
       "type": "single",
       "cpt": "property",
@@ -41,7 +49,7 @@
       "title": "Sydney Harbour Collection"
     },
     {
-      "static": "property.html?slug=sydney-cbd-residences",
+      "static": "/property?slug=sydney-cbd-residences",
       "wpPath": "/property/sydney-cbd-residences/",
       "type": "single",
       "cpt": "property",
@@ -49,13 +57,13 @@
       "title": "Sydney CBD Residences"
     },
     {
-      "static": "events.html",
+      "static": "/events",
       "wpPath": "/events/",
       "type": "archive",
       "title": "活動預告"
     },
     {
-      "static": "event.html?slug=taipei-101-seminar",
+      "static": "/event?slug=taipei-101-seminar",
       "wpPath": "/events/taipei-101-seminar/",
       "type": "single",
       "cpt": "event",
@@ -63,7 +71,7 @@
       "title": "台北 101 置產說明會"
     },
     {
-      "static": "event.html?slug=taipei-101-aura-wine-tasting",
+      "static": "/event?slug=taipei-101-aura-wine-tasting",
       "wpPath": "/events/taipei-101-aura-wine-tasting/",
       "type": "single",
       "cpt": "event",
@@ -71,7 +79,7 @@
       "title": "AURA 紅酒品鑑會 · 台北 101"
     },
     {
-      "static": "event.html?slug=taipei-101-briefing-2026",
+      "static": "/event?slug=taipei-101-briefing-2026",
       "wpPath": "/events/taipei-101-briefing-2026/",
       "type": "single",
       "cpt": "event",
@@ -79,7 +87,7 @@
       "title": "台北 101 說明會 2026"
     },
     {
-      "static": "event.html?slug=wine-property-tasting-2026",
+      "static": "/event?slug=wine-property-tasting-2026",
       "wpPath": "/events/wine-property-tasting-2026/",
       "type": "single",
       "cpt": "event",
@@ -87,43 +95,43 @@
       "title": "品酒會 2026"
     },
     {
-      "static": "leasing.html",
+      "static": "/leasing",
       "wpPath": "/leasing/",
       "type": "page",
       "title": "租賃管理"
     },
     {
-      "static": "classroom.html",
+      "static": "/classroom",
       "wpPath": "/classroom/",
       "type": "archive",
       "title": "澳洲不動產小課堂"
     },
     {
-      "static": "about.html",
+      "static": "/about",
       "wpPath": "/about/",
       "type": "page",
       "title": "關於環球置業"
     },
     {
-      "static": "group.html",
+      "static": "/group",
       "wpPath": "/about/group/",
       "type": "page",
       "title": "澳華國際集團"
     },
     {
-      "static": "privacy.html",
+      "static": "/privacy",
       "wpPath": "/privacy/",
       "type": "page",
       "title": "隱私權政策"
     },
     {
-      "static": "sitemap.html",
+      "static": "/sitemap",
       "wpPath": "/sitemap/",
       "type": "page",
       "title": "網站地圖"
     },
     {
-      "static": "search.html",
+      "static": "/search",
       "wpPath": "/search/",
       "type": "page",
       "title": "站內搜尋"

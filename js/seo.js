@@ -37,20 +37,20 @@
   function pagePath() {
     const page = document.body.dataset.page || 'home';
     const map = {
-      home: 'index.html',
-      properties: 'properties.html',
-      'property-detail': 'property.html',
-      leasing: 'leasing.html',
-      events: 'events.html',
-      'event-detail': 'event.html',
-      classroom: 'classroom.html',
-      about: 'about.html',
-      group: 'group.html',
-      privacy: 'privacy.html',
-      sitemap: 'sitemap.html',
-      search: 'search.html',
+      home: '/',
+      properties: '/properties',
+      'property-detail': 'property',
+      leasing: '/leasing',
+      events: '/events',
+      'event-detail': 'event',
+      classroom: '/classroom',
+      about: '/about',
+      group: '/group',
+      privacy: '/privacy',
+      sitemap: '/sitemap',
+      search: '/search',
     };
-    let path = map[page] || 'index.html';
+    let path = map[page] || '/';
     if (page === 'property-detail') {
       const slug = new URLSearchParams(window.location.search).get('slug');
       if (slug) path += `?slug=${encodeURIComponent(slug)}`;

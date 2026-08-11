@@ -62,7 +62,7 @@
       groups.get(key).push(event);
     });
     const entries = Array.from(groups.entries());
-    entries.sort((a, b) => (status === 'past' ? b[0].localeCompare(a[0]) : a[0].localeCompare(b[0])));
+    entries.sort((a, b) => b[0].localeCompare(a[0]));
     return entries;
   }
 

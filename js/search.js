@@ -86,7 +86,7 @@
       .map((n) =>
         resultCard(
           {
-            href: `events.html#${n.slug}`,
+            href: `/events#${n.slug}`,
             tag: `活動預告 · ${n.categoryLabel || ''}`,
             title: n.title,
             desc: n.summary,
@@ -100,7 +100,7 @@
       .map((v) =>
         resultCard(
           {
-            href: `classroom.html#${v.slug}`,
+            href: `/classroom#${v.slug}`,
             tag: '澳洲不動產小課堂',
             title: v.title,
           },

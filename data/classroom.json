@@ -5,63 +5,172 @@
       "title": "第1集：台灣人沒澳洲身份，能買房嗎？",
       "category": "overseas",
       "thumbnail": "assets/images/classroom/classroom-ep01-cover.jpg?v=20260723d",
-      "videoSrc": "assets/videos/classroom/classroom-ep01.mp4"
+      "videoSrc": "assets/videos/generated/classroom-ep01-zh.mp4",
+      "categoryLabel": "海外買房"
     },
     {
       "slug": "episode-02",
       "title": "第2集：買澳洲房一定要知道的安心保障——FIRB是什麼？",
       "category": "overseas",
       "thumbnail": "assets/images/classroom/classroom-ep02-cover.jpg?v=20260723d",
-      "videoSrc": "assets/videos/classroom/classroom-ep02.mp4"
+      "videoSrc": "assets/videos/generated/classroom-ep02-zh.mp4",
+      "categoryLabel": "海外買房"
     },
     {
       "slug": "episode-03",
       "title": "第3集：台灣人買澳洲房能貸款嗎？可以貸幾成？",
       "category": "overseas",
       "thumbnail": "assets/images/classroom/classroom-ep03-cover.jpg?v=20260723d",
-      "videoSrc": "assets/videos/classroom/classroom-ep03.mp4"
+      "videoSrc": "assets/videos/generated/classroom-ep03-zh.mp4",
+      "categoryLabel": "海外買房"
     },
     {
       "slug": "episode-04",
       "title": "第4集：海外買家置產成本！如何精算附加印花稅？",
       "category": "overseas",
       "thumbnail": "assets/images/classroom/classroom-ep04-cover.jpg?v=20260723d",
-      "videoSrc": "assets/videos/classroom/classroom-ep04.mp4"
+      "videoSrc": "assets/videos/generated/classroom-ep04-zh.mp4",
+      "categoryLabel": "海外買房"
     },
     {
       "slug": "episode-05",
       "title": "第5集：澳洲買房後的日常「持有成本」有哪些？",
       "category": "overseas",
       "thumbnail": "assets/images/classroom/classroom-ep05-cover.jpg?v=20260723d",
-      "videoSrc": "assets/videos/classroom/classroom-ep05.mp4"
+      "videoSrc": "assets/videos/generated/classroom-ep05-zh.mp4",
+      "categoryLabel": "海外買房"
     },
     {
       "slug": "episode-06",
-      "title": "第6集：維持穩定租租收益，完美避開空置費！",
+      "title": "第6集：維持穩定租賃收益，完美避開空置費！",
       "category": "overseas",
       "thumbnail": "assets/images/classroom/classroom-ep06-cover.jpg?v=20260723d",
-      "videoSrc": "assets/videos/classroom/classroom-ep06.mp4"
+      "videoSrc": "assets/videos/generated/classroom-ep06-zh.mp4",
+      "categoryLabel": "海外買房"
     },
     {
       "slug": "episode-07",
       "title": "第7集：免飛澳洲！人在台灣怎麼跨海安全買房？",
       "category": "overseas",
       "thumbnail": "assets/images/classroom/classroom-ep07-cover.jpg?v=20260723d",
-      "videoSrc": "assets/videos/classroom/classroom-ep07.mp4"
+      "videoSrc": "assets/videos/generated/classroom-ep07-zh.mp4",
+      "categoryLabel": "海外買房"
     },
     {
       "slug": "episode-08",
       "title": "第8集：為什麼海外投資客都搶著買澳洲「預售屋」？",
       "category": "overseas",
       "thumbnail": "assets/images/classroom/classroom-ep08-cover.jpg?v=20260723d",
-      "videoSrc": "assets/videos/classroom/classroom-ep08.mp4"
+      "videoSrc": "assets/videos/generated/classroom-ep08-zh.mp4",
+      "categoryLabel": "海外買房"
     },
     {
       "slug": "episode-10",
       "title": "第10集：買澳洲房產，可以順便拿澳洲身份移民嗎？",
       "category": "overseas",
       "thumbnail": "assets/images/classroom/classroom-ep10-cover.jpg?v=20260723d",
-      "videoSrc": "assets/videos/classroom/classroom-ep10.mp4"
+      "videoSrc": "assets/videos/generated/classroom-ep10-zh.mp4",
+      "categoryLabel": "海外買房"
+    },
+    {
+      "slug": "project-623-collins-video",
+      "title": "623 Collins｜墨爾本 CBD 新房項目介紹",
+      "category": "property",
+      "categoryLabel": "澳洲房產",
+      "summary": "中文重點整理項目位置、城市機能、產品定位與自住出租配置邏輯，方便快速掌握墨爾本市中心置產重點。",
+      "thumbnail": "assets/images/optimized/623-collins-web.jpg",
+      "videoSrc": "assets/videos/generated/project-623-collins-zh.mp4",
+      "videoLayout": "wide"
+    },
+    {
+      "slug": "project-tallawong-green-video",
+      "title": "Tallawong Green｜雪梨西北自開發項目介紹",
+      "category": "property",
+      "categoryLabel": "澳洲房產",
+      "summary": "中文介紹 Tallawong Green 社區規劃、交通配套、綠地生活與雪梨西北成長邏輯，聚焦自住與長期配置。",
+      "thumbnail": "assets/images/tallawong-green-exterior.jpg",
+      "videoSrc": "assets/videos/generated/project-tallawong-green-zh.mp4",
+      "videoLayout": "wide"
+    },
+    {
+      "slug": "project-aura-melbourne-square-video",
+      "title": "AURA @ Melbourne Square｜墨爾本南岸新房項目介紹",
+      "category": "property",
+      "categoryLabel": "澳洲房產",
+      "summary": "中文整理南岸生活圈、城市視野、公寓產品與出租需求，協助判斷墨爾本核心區域資產配置價值。",
+      "thumbnail": "assets/images/aura-web.jpg",
+      "videoSrc": "assets/videos/generated/project-aura-melbourne-square-zh.mp4",
+      "videoLayout": "wide"
+    },
+    {
+      "slug": "travel-australia-overview-video",
+      "title": "澳洲旅遊生活｜城市與自然總覽",
+      "category": "travel",
+      "categoryLabel": "旅遊生活",
+      "summary": "中文介紹澳洲城市生活、自然景觀、教育氛圍與家庭居住環境，作為看房與安家前的生活認識。",
+      "thumbnail": "assets/images/home-landscape-global.jpg",
+      "videoSrc": "assets/videos/generated/travel-australia-zh.mp4",
+      "videoLayout": "wide"
+    },
+    {
+      "slug": "travel-sydney-video",
+      "title": "雪梨旅遊生活｜海港、商圈與交通機能",
+      "category": "travel",
+      "categoryLabel": "旅遊生活",
+      "summary": "中文介紹雪梨海港、CBD、核心商圈、交通與生活機能，幫助客戶理解雪梨置產與居住環境。",
+      "thumbnail": "assets/images/optimized/sydney-harbour.jpg",
+      "videoSrc": "assets/videos/generated/travel-sydney-zh.mp4",
+      "videoLayout": "wide"
+    },
+    {
+      "slug": "travel-brisbane-video",
+      "title": "布里斯本旅遊生活｜陽光城市與河岸生活",
+      "category": "travel",
+      "categoryLabel": "旅遊生活",
+      "summary": "中文介紹布里斯本氣候、河岸生活、城市更新與家庭居住氛圍，補足置業決策中的生活面資訊。",
+      "thumbnail": "assets/images/optimized/news-brisbane.jpg",
+      "videoSrc": "assets/videos/generated/travel-brisbane-zh.mp4",
+      "videoLayout": "wide"
+    },
+    {
+      "slug": "travel-melbourne-video",
+      "title": "墨爾本旅遊生活｜文化、咖啡與市中心生活",
+      "category": "travel",
+      "categoryLabel": "旅遊生活",
+      "summary": "中文介紹墨爾本文化、餐飲、教育、交通與 CBD 生活感，協助客戶建立城市印象。",
+      "thumbnail": "assets/images/optimized/cls-melbourne.jpg",
+      "videoSrc": "assets/videos/generated/travel-melbourne-zh.mp4",
+      "videoLayout": "wide"
+    },
+    {
+      "slug": "renting-australia-basics-video",
+      "title": "澳洲租房常識｜申請、租約與租客責任",
+      "category": "management",
+      "categoryLabel": "物業管理",
+      "summary": "中文整理租房申請、租約、租客與房東責任，協助海外屋主理解澳洲租賃流程。",
+      "thumbnail": "assets/images/optimized/cls-property-mgmt.jpg",
+      "videoSrc": "assets/videos/generated/management-renting-basics-zh.mp4",
+      "videoLayout": "wide"
+    },
+    {
+      "slug": "renting-condition-report-video",
+      "title": "澳洲租房常識｜入住檢查與 Condition Report",
+      "category": "management",
+      "categoryLabel": "物業管理",
+      "summary": "中文介紹入住檢查、房況記錄與照片留存的重要性，降低押金與維修爭議。",
+      "thumbnail": "assets/images/optimized/service-leasing.jpg",
+      "videoSrc": "assets/videos/generated/management-condition-report-zh.mp4",
+      "videoLayout": "wide"
+    },
+    {
+      "slug": "renting-lease-bond-video",
+      "title": "澳洲租房常識｜退租、押金與續租安排",
+      "category": "management",
+      "categoryLabel": "物業管理",
+      "summary": "中文說明退租通知、押金處理、租期結束與後續續租安排，讓屋主更清楚長期出租管理節點。",
+      "thumbnail": "assets/images/optimized/cls-buying-process.jpg",
+      "videoSrc": "assets/videos/generated/management-lease-bond-zh.mp4",
+      "videoLayout": "wide"
     }
   ]
 }

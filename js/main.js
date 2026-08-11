@@ -2,23 +2,129 @@
   const currentPage = document.body.dataset.page || '';
   const isDesignMode = new URLSearchParams(window.location.search).has('design');
 
+  function stripHtmlExtension(path) {
+    const match = path.match(/^([^?#]+)\.html([?#].*)?$/);
+    if (!match) return path;
+    return `${match[1]}${match[2] || ''}`;
+  }
+
+  function shouldNormalizeHref(href) {
+    return href && !/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(href);
+  }
+
+  function resolveStaticHref(path) {
+    const hashIdx = path.indexOf('#');
+    const queryIdx = path.indexOf('?');
+    let cut = path.length;
+    if (hashIdx >= 0) cut = Math.min(cut, hashIdx);
+    if (queryIdx >= 0) cut = Math.min(cut, queryIdx);
+    const base = path.slice(0, cut);
+    const rest = path.slice(cut);
+    const map = {
+      '/': 'index.html',
+      '/properties': 'properties.html',
+      '/property': 'property.html',
+      '/leasing': 'leasing.html',
+      '/events': 'events.html',
+      '/event': 'event.html',
+      '/classroom': 'classroom.html',
+      '/about': 'about.html',
+      '/group': 'group.html',
+      '/privacy': 'privacy.html',
+      '/search': 'search.html',
+      '/sitemap': 'sitemap.html',
+    };
+    if (map[base]) return map[base] + rest;
+    return path;
+  }
+
   function pageHref(path) {
-    return isDesignMode ? `${path}?design=1` : path;
+    path = resolveStaticHref(path);
+    if (!isDesignMode) return path;
+    const [base, hash] = path.split('#');
+    const separator = base.includes('?') ? '&' : '?';
+    return `${base}${separator}design=1${hash ? `#${hash}` : ''}`;
+  }
+
+  function normalizePageLinks(root = document) {
+    if (isDesignMode) return;
+    root.querySelectorAll('a[href]').forEach((link) => {
+      const href = link.getAttribute('href');
+      if (!shouldNormalizeHref(href)) return;
+      const normalized = stripHtmlExtension(href);
+      if (normalized !== href) link.setAttribute('href', normalized);
+    });
   }
 
   const navItems = [
-    { href: 'index.html', label: '首頁', id: 'home' },
-    { href: 'properties.html', label: '精選建案', id: 'properties' },
-    { href: 'leasing.html', label: '租賃管理', id: 'leasing' },
-    { href: 'events.html', label: '活動預告', id: 'events' },
-    { href: 'classroom.html', label: '澳洲不動產小課堂', id: 'classroom' },
     {
-      href: 'about.html',
+      href: '/',
+      label: '首頁',
+      id: 'home',
+      children: [
+        { href: '/#home-overview', label: '網站首頁', id: 'home' },
+        { href: '/#company-foundation', label: '公司背書', id: 'home-company' },
+        { href: '/#company-history', label: '發展歷程', id: 'home-history' },
+        { href: '/#company-foundation', label: '一站式服務', id: 'home-onestop' },
+        { href: '/#why-choose-us', label: '為什麼選擇我們', id: 'home-why' },
+        { href: '/#service-process', label: '服務流程', id: 'home-process' },
+        { href: '/#service-system', label: '服務類型', id: 'home-services' },
+        { href: '/#office-network', label: '全球據點', id: 'home-network' },
+      ],
+    },
+    {
+      href: '/properties',
+      label: '精選建案',
+      id: 'properties',
+      children: [
+        { href: '/properties#new-build', label: '澳洲新建案', id: 'properties-new' },
+        { href: '/properties#established-property', label: '中古屋交易', id: 'properties-established' },
+      ],
+    },
+    {
+      href: '/leasing',
+      label: '租賃管理',
+      id: 'leasing',
+      children: [
+        { href: '/leasing#owner-process', label: '委託流程', id: 'leasing-process' },
+        { href: '/leasing#gr-leasing', label: 'GR Leasing 長租', id: 'gr-leasing' },
+        { href: '/leasing#homio', label: 'Homio 短租', id: 'homio' },
+        { href: '/leasing#leasing-scope', label: '服務內容', id: 'leasing-scope' },
+        { href: '/leasing#leasing-benefits', label: '管理優勢', id: 'leasing-benefits' },
+      ],
+    },
+    {
+      href: '/events',
+      label: '活動預告',
+      id: 'events',
+      children: [
+        { href: '/events#upcoming-events', label: '最新活動', id: 'events-upcoming' },
+        { href: '/events#gallery', label: '活動展示', id: 'events-gallery' },
+        { href: '/events#past-events', label: '過往活動', id: 'events-past' },
+        { href: '/events#consult', label: '預約諮詢', id: 'events-consult' },
+      ],
+    },
+    {
+      href: '/classroom',
+      label: '澳洲不動產小課堂',
+      id: 'classroom',
+      children: [
+        { href: '/classroom#classroom-top', label: '全部主題', id: 'classroom-all' },
+        { href: '/classroom?category=property#classroom-top', label: '澳洲房產', id: 'classroom-property' },
+        { href: '/classroom?category=overseas#classroom-top', label: '海外買房', id: 'classroom-overseas' },
+        { href: '/classroom?category=tax#classroom-top', label: '稅務法規', id: 'classroom-tax' },
+        { href: '/classroom?category=travel#classroom-top', label: '旅遊生活', id: 'classroom-travel' },
+        { href: '/classroom?category=management#classroom-top', label: '物業管理', id: 'classroom-management' },
+      ],
+    },
+    {
+      href: '/about',
       label: '關於我們',
       id: 'about',
       children: [
-        { href: 'about.html', label: '關於環球置業', id: 'about' },
-        { href: 'group.html', label: '澳華國際集團', id: 'group' },
+        { href: '/about#team-intro', label: '團隊介紹', id: 'about' },
+        { href: '/about#team', label: '專業團隊', id: 'about-team' },
+        { href: '/about#team-support', label: '後勤團隊', id: 'about-support' },
       ],
     },
   ];
@@ -44,7 +150,7 @@
 
     return `
       <div class="site-nav__item site-nav__item--has-sub${parentActive}">
-        <a href="${pageHref(item.href)}" class="site-nav__parent${parentActive}">${item.label}</a>
+        <a href="${pageHref(item.href)}" class="site-nav__parent${parentActive}" aria-haspopup="true">${item.label}</a>
         <div class="site-nav__sub" role="group" aria-label="${item.label}">
           ${subLinks}
         </div>
@@ -53,7 +159,7 @@
 
   function searchFormHtml() {
     return `
-      <form class="site-search" role="search" action="${pageHref('search.html')}" method="get">
+      <form class="site-search" role="search" action="${pageHref('/search')}" method="get">
         <input type="search" name="q" class="site-search__input" placeholder="搜尋建案、活動、資訊…" aria-label="搜尋網站內容" autocomplete="off">
         <button type="submit" class="site-search__btn" aria-label="搜尋">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="18" height="18">
@@ -66,14 +172,14 @@
 
   function brandLockup() {
     if (window.AGBrand) {
-      return window.AGBrand.brandLockupHtml({ href: pageHref('index.html'), footer: true });
+      return window.AGBrand.brandLockupHtml({ href: pageHref('/'), footer: true });
     }
     return `<a href="index.html" class="brand-lockup"><span class="brand-lockup__primary">環球置業 Global Realty</span></a>`;
   }
 
   function brandHeader() {
     if (window.AGBrand?.brandHeaderHtml) {
-      return window.AGBrand.brandHeaderHtml({ href: pageHref('index.html') });
+      return window.AGBrand.brandHeaderHtml({ href: pageHref('/') });
     }
     return `${brandLockup()}${brandFrom()}`;
   }
@@ -179,9 +285,9 @@
       <div class="site-footer--nord__legal">
         <p class="site-footer--nord__copyright">
           Copyright 2026&nbsp;|&nbsp;
-          <a href="${pageHref('index.html')}">Global Realty</a>&nbsp;|&nbsp;
+          <a href="${pageHref('/')}">Global Realty</a>&nbsp;|&nbsp;
           All Rights Reserved&nbsp;|&nbsp;
-          <a href="${pageHref('privacy.html')}">隱私權政策</a>
+          <a href="${pageHref('/privacy')}">隱私權政策</a>
         </p>
       </div>`;
   }
@@ -200,19 +306,23 @@
               <p>台北市信義區忠孝東路四段 525 號 14–15 樓<br>THE COLLECTIVE 巨蛋國際中心</p>
             </div>
             <div class="site-footer--nord__office">
-              <h4>101 45 樓辦公室 Taipei 101 Office</h4>
+              <h4>台北 101 亞太總部 Taipei 101 APAC HQ</h4>
               <p>台北市信義區信義路五段 7 號<br>台北 101 45 樓 A-1 室</p>
             </div>
             <div class="site-footer--nord__office">
-              <h4>雪梨總部 Sydney Office</h4>
+              <h4>澳洲總部 Sydney Office</h4>
               <p>Level 3, 370 Pitt Street<br>Sydney NSW 2000, Australia</p>
             </div>
             <div class="site-footer--nord__office">
               <h4>墨爾本 Melbourne Office</h4>
-              <p>Level 8, 356 Collins St<br>Melbourne VIC 3000, Australia</p>
+              <p>Level 3, 171 La Trobe Street<br>Melbourne VIC 3000, Australia</p>
+            </div>
+            <div class="site-footer--nord__office">
+              <h4>布里斯本 Brisbane Office</h4>
+              <p>7B/50-56 Sanders Street<br>Upper Mount Gravatt, QLD 4122</p>
             </div>
             <p class="site-footer--nord__email">
-              <a href="mailto:arthurwei@globalrealty.com.au">arthurwei@globalrealty.com.au</a>
+              <a href="mailto:taiwanmkt@globalrealty.com.au">taiwanmkt@globalrealty.com.au</a>
             </p>
           </div>
           <div class="site-footer--nord__form">
@@ -241,8 +351,8 @@
           </div>
         </div>
         <div class="site-footer--nord__bottom">
-          <p>© ${new Date().getFullYear()} 環球置業 Global Realty · from 澳華國際集團 Award Global。以上資訊僅供參考，不構成財務或投資建議。</p>
-          <p class="site-footer--nord__sitemap"><a href="${pageHref('sitemap.html')}">網站地圖</a></p>
+          <p>© ${new Date().getFullYear()} 環球置業 Global Realty · Your Global Property Partner · from 澳華國際集團 Award Global。以上資訊僅供參考，所有資訊與數據均以最新官方公告及專案最終版本為準。</p>
+          <p class="site-footer--nord__sitemap"><a href="${pageHref('/sitemap')}">網站地圖</a></p>
         </div>
         ${copyrightBarHtml()}
       </footer>
@@ -250,7 +360,7 @@
   }
 
   function renderAboutSubnav() {
-    if (currentPage !== 'about' && currentPage !== 'group') return;
+    if (currentPage !== 'about') return;
     const main = document.querySelector('main');
     if (!main) return;
 
@@ -261,8 +371,9 @@
       <div class="about-subnav__inner">
         <span class="about-subnav__label">關於我們</span>
         <div class="about-subnav__tabs">
-          <a href="${pageHref('about.html')}" class="${currentPage === 'about' ? 'is-active' : ''}">關於環球置業</a>
-          <a href="${pageHref('group.html')}" class="${currentPage === 'group' ? 'is-active' : ''}">澳華國際集團</a>
+          <a href="${pageHref('/about#team-intro')}" class="is-active">團隊介紹</a>
+          <a href="${pageHref('/about#team')}">專業團隊</a>
+          <a href="${pageHref('/about#team-support')}">後勤團隊</a>
         </div>
       </div>`;
     main.insertBefore(subnav, main.firstChild);
@@ -279,14 +390,30 @@
     renderHeader();
     renderAboutSubnav();
     renderFooter();
+    normalizePageLinks();
     loadDesignToolbar();
     loadFloatingDock();
+  });
+
+  document.addEventListener('click', (event) => {
+    if (isDesignMode) return;
+    const link = event.target.closest?.('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (!shouldNormalizeHref(href)) return;
+    const normalized = stripHtmlExtension(href);
+    if (normalized === href) return;
+    event.preventDefault();
+    window.location.href = normalized;
   });
 
   function loadFloatingDock() {
     const script = document.createElement('script');
     script.src = 'js/floating-dock.js';
-    script.onload = () => window.AGFloatingDock?.renderFloatingDock();
+    script.onload = () => {
+      window.AGFloatingDock?.renderFloatingDock();
+      normalizePageLinks();
+    };
     document.body.appendChild(script);
   }
 })();

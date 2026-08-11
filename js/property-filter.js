@@ -42,12 +42,7 @@ class PropertyFilter {
   }
 
   cityLabel(city) {
-    const labels = {
-      brisbane: '布里斯本 BRISBANE',
-      'gold-coast': '黃金海岸 GOLD COAST',
-      sydney: '雪梨 SYDNEY',
-      melbourne: '墨爾本 MELBOURNE',
-    };
+    const labels = { sydney: '雪梨 SYDNEY', melbourne: '墨爾本 MELBOURNE' };
     return labels[city] || city.toUpperCase();
   }
 
@@ -68,7 +63,7 @@ class PropertyFilter {
       groups.get(p.city).push(p);
     });
 
-    const order = ['brisbane', 'gold-coast', 'sydney', 'melbourne'];
+    const order = ['sydney', 'melbourne'];
     const sections = order
       .filter((city) => groups.has(city))
       .map(
