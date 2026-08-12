@@ -13,4 +13,4 @@ Write-Host "按 Ctrl+C 停止伺服器。" -ForegroundColor DarkGray
 Write-Host ""
 
 Set-Location $Root
-python -m http.server $Port
+python scripts/serve-static.py --port $Port

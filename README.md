@@ -1,42 +1,27 @@
 # 環球置業 Global Realty 台灣官網
 
-
-
 環球置業為主品牌、澳華國際集團 from 背書的跨境置產靜態網站（from Meta 式雙品牌）。
 
-
+**主工作路徑：** `G:\我的雲端硬碟\公司\澳華國際\官網`（集團根：`G:\我的雲端硬碟\公司\澳華國際`）。路徑約定見 `.cursor/WORKSPACE-PATHS.md`。
 
 ## 本地預覽
 
-
-
 ```powershell
-
-cd 官網
-
+cd "G:\我的雲端硬碟\公司\澳華國際\官網"
 .\design\serve.ps1
-
-# 或：python -m http.server 8765
-
+# 或：python scripts/serve-static.py --port 8765
 ```
 
-
+**作品集公開連結：** https://arthurwei1027.github.io/global-realty-taiwan/
 
 | 用途 | URL |
-
 |------|-----|
-
-| 首頁 | http://localhost:8765/ |
-
+| 首頁 | http://localhost:8765/ 或 `/index` |
 | 設計畫廊 | http://localhost:8765/design/ |
-
 | Design Mode | http://localhost:8765/index.html?design=1 |
+| 子分頁 demo | http://localhost:8765/about?design=1 |
 
-| 子分頁 demo | http://localhost:8765/about.html?design=1 |
-
-
-
-> 若 `ERR_EMPTY_RESPONSE`：`netstat -ano | findstr ":8765"` 查 PID → `Stop-Process` → 重啟。同一埠只跑一個伺服器。
+> 請用 `serve-static.py`，不要用 `python -m http.server`；後者不支援 `/index`、`/about` 這類無副檔名網址，會出現 404。
 
 
 

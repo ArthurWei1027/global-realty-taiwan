@@ -17,7 +17,7 @@ if (-not (Test-Path $Cloudflared)) {
 $listening = netstat -ano | Select-String ":$Port\s.*LISTENING"
 if (-not $listening) {
     Write-Host "啟動本地伺服器 :$Port ..." -ForegroundColor DarkGray
-    Start-Process powershell -ArgumentList "-NoExit", "-Command", "Set-Location '$Root'; python -m http.server $Port" -WindowStyle Minimized
+    Start-Process powershell -ArgumentList "-NoExit", "-Command", "Set-Location '$Root'; python scripts/serve-static.py --port $Port" -WindowStyle Minimized
     Start-Sleep -Seconds 2
 }
 
