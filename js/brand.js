@@ -1,5 +1,5 @@
 (function () {
-  const GR_MARK = 'assets/images/brands/global-realty-mark.png?v=20260810-logo-centered';
+  const GR_MARK = 'assets/images/brands/global-realty-mark-teal.png?v=20260812-teal-mark';
   const AG_LOCKUP = 'assets/images/brands/award-global-lockup.png?v=20260812-ag-lockup';
   const BRAND_BANNER = 'assets/images/brands/global-realty-lockup.png?v=20260806-logo';
   const BANNER_ALT = '\u6fb3\u83ef\u570b\u969b Award Global \u00b7 \u74b0\u7403\u7f6e\u696d Global Realty';
